@@ -1,0 +1,2660 @@
+{
+ "abc_123_a": {
+  "flags": 100,
+  "ext": ".mp3",
+  "file": "abc_123_a.ogg",
+  "audioId": -1
+ },
+ "snd_sparkle1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_sparkle1.wav",
+  "audioId": 0
+ },
+ "snd_speedup": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_speedup.wav",
+  "audioId": 1
+ },
+ "snd_hero": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hero.wav",
+  "audioId": 2
+ },
+ "snd_dogresidue": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_dogresidue.wav",
+  "audioId": 3
+ },
+ "snd_dogsalad": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_dogsalad.wav",
+  "audioId": 4
+ },
+ "snd_catsalad": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_catsalad.wav",
+  "audioId": 5
+ },
+ "snd_shadowpendant": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_shadowpendant.wav",
+  "audioId": 6
+ },
+ "snd_magicminer": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_magicminer.wav",
+  "audioId": 7
+ },
+ "snd_tearcard": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tearcard.wav",
+  "audioId": 8
+ },
+ "snd_drumroll": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_drumroll.wav",
+  "audioId": 9
+ },
+ "snd_glassbreak": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_glassbreak.wav",
+  "audioId": 10
+ },
+ "snd_fall": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_fall.wav",
+  "audioId": 11
+ },
+ "snd_spearappear": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_spearappear.wav",
+  "audioId": 12
+ },
+ "snd_spearrise": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_spearrise.wav",
+  "audioId": 13
+ },
+ "snd_undynedis": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_undynedis.wav",
+  "audioId": 14
+ },
+ "snd_undynestep": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_undynestep.wav",
+  "audioId": 15
+ },
+ "snd_knock": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_knock.wav",
+  "audioId": 16
+ },
+ "snd_oddtalk1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_oddtalk1.wav",
+  "audioId": 17
+ },
+ "snd_oddtalk2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_oddtalk2.wav",
+  "audioId": 18
+ },
+ "snd_arrow": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_arrow.wav",
+  "audioId": 19
+ },
+ "snd_impact": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_impact.wav",
+  "audioId": 20
+ },
+ "snd_splash": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_splash.wav",
+  "audioId": 21
+ },
+ "snd_bluh": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_bluh.wav",
+  "audioId": 22
+ },
+ "snd_shock": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_shock.wav",
+  "audioId": 23
+ },
+ "snd_save": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_save.wav",
+  "audioId": 24
+ },
+ "snd_dumbvictory": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_dumbvictory.wav",
+  "audioId": 25
+ },
+ "snd_wrongvictory": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wrongvictory.wav",
+  "audioId": 26
+ },
+ "snd_bell": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_bell.wav",
+  "audioId": 27
+ },
+ "snd_b": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_b.wav",
+  "audioId": 28
+ },
+ "snd_break2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_break2.wav",
+  "audioId": 29
+ },
+ "snd_break1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_break1.wav",
+  "audioId": 30
+ },
+ "snd_hurtsmall": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtsmall.wav",
+  "audioId": 31
+ },
+ "snd_hurtlaugh": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtlaugh.wav",
+  "audioId": 32
+ },
+ "snd_hurtloox": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtloox.wav",
+  "audioId": 33
+ },
+ "snd_hurtgirl": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtgirl.wav",
+  "audioId": 34
+ },
+ "snd_hurtdragon": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtdragon.wav",
+  "audioId": 35
+ },
+ "snd_hurtbuzz": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtbuzz.wav",
+  "audioId": 36
+ },
+ "snd_hurtbeef": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtbeef.wav",
+  "audioId": 37
+ },
+ "snd_hurtbig": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurtbig.wav",
+  "audioId": 38
+ },
+ "snd_doghurt1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_doghurt1.wav",
+  "audioId": 39
+ },
+ "snd_pombark": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_pombark.wav",
+  "audioId": 40
+ },
+ "snd_vulkinhurt": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_vulkinhurt.wav",
+  "audioId": 41
+ },
+ "snd_ehurt1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_ehurt1.wav",
+  "audioId": 42
+ },
+ "snd_laz": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_laz.wav",
+  "audioId": 43
+ },
+ "snd_punchweak": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_punchweak.wav",
+  "audioId": 44
+ },
+ "snd_punchstrong": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_punchstrong.wav",
+  "audioId": 45
+ },
+ "snd_grab": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_grab.wav",
+  "audioId": 46
+ },
+ "snd_slidewhist": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_slidewhist.wav",
+  "audioId": 47
+ },
+ "snd_levelup": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_levelup.wav",
+  "audioId": 48
+ },
+ "snd_escaped": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_escaped.wav",
+  "audioId": 49
+ },
+ "snd_damage": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_damage.wav",
+  "audioId": 50
+ },
+ "snd_floweylaugh": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_floweylaugh.wav",
+  "audioId": 51
+ },
+ "snd_hurt1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurt1.wav",
+  "audioId": 52
+ },
+ "snd_victor": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_victor.wav",
+  "audioId": 53
+ },
+ "snd_hit": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hit.wav",
+  "audioId": 54
+ },
+ "snd_mtt1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt1.wav",
+  "audioId": 55
+ },
+ "snd_mtt2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt2.wav",
+  "audioId": 56
+ },
+ "snd_mtt3": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt3.wav",
+  "audioId": 57
+ },
+ "snd_mtt4": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt4.wav",
+  "audioId": 58
+ },
+ "snd_mtt5": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt5.wav",
+  "audioId": 59
+ },
+ "snd_mtt6": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt6.wav",
+  "audioId": 60
+ },
+ "snd_mtt7": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt7.wav",
+  "audioId": 61
+ },
+ "snd_mtt8": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt8.wav",
+  "audioId": 62
+ },
+ "snd_mtt9": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt9.wav",
+  "audioId": 63
+ },
+ "snd_tem": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem.wav",
+  "audioId": 64
+ },
+ "snd_tem2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem2.wav",
+  "audioId": 65
+ },
+ "snd_tem3": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem3.wav",
+  "audioId": 66
+ },
+ "snd_tem4": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem4.wav",
+  "audioId": 67
+ },
+ "snd_tem5": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem5.wav",
+  "audioId": 68
+ },
+ "snd_tem6": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tem6.wav",
+  "audioId": 69
+ },
+ "snd_wngdng1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng1.wav",
+  "audioId": 70
+ },
+ "snd_wngdng2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng2.wav",
+  "audioId": 71
+ },
+ "snd_wngdng3": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng3.wav",
+  "audioId": 72
+ },
+ "snd_wngdng4": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng4.wav",
+  "audioId": 73
+ },
+ "snd_wngdng5": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng5.wav",
+  "audioId": 74
+ },
+ "snd_wngdng6": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng6.wav",
+  "audioId": 75
+ },
+ "snd_wngdng7": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wngdng7.wav",
+  "audioId": 76
+ },
+ "snd_txtund": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtund.wav",
+  "audioId": 77
+ },
+ "snd_txtund_hyper": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtund_hyper.wav",
+  "audioId": 78
+ },
+ "snd_txtund2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtund2.wav",
+  "audioId": 79
+ },
+ "snd_txtund3": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtund3.wav",
+  "audioId": 80
+ },
+ "snd_txtund4": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtund4.wav",
+  "audioId": 81
+ },
+ "snd_txtal": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtal.wav",
+  "audioId": 82
+ },
+ "snd_txtasr": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtasr.wav",
+  "audioId": 83
+ },
+ "snd_txtasr2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtasr2.wav",
+  "audioId": 84
+ },
+ "snd_wonderfulidea": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wonderfulidea.wav",
+  "audioId": 85
+ },
+ "snd_wonderfulidea_ja": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_wonderfulidea_ja.wav",
+  "audioId": 86
+ },
+ "snd_txtpap": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtpap.wav",
+  "audioId": 87
+ },
+ "snd_txtsans": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtsans.wav",
+  "audioId": 88
+ },
+ "snd_txtsans2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtsans2.wav",
+  "audioId": 89
+ },
+ "snd_txtasg": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txtasg.wav",
+  "audioId": 90
+ },
+ "snd_vaporized": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_vaporized.wav",
+  "audioId": 91
+ },
+ "snd_chug": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_chug.wav",
+  "audioId": 92
+ },
+ "SND_SPLASH_2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "SND_SPLASH_2.wav",
+  "audioId": 93
+ },
+ "SND_TXT2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "SND_TXT2.wav",
+  "audioId": 94
+ },
+ "SND_TXT1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "SND_TXT1.wav",
+  "audioId": 95
+ },
+ "snd_nosound": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_nosound.wav",
+  "audioId": 96
+ },
+ "snd_floweytalk1": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_floweytalk1.wav",
+  "audioId": 97
+ },
+ "snd_floweytalk2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_floweytalk2.wav",
+  "audioId": 98
+ },
+ "snd_txttor2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txttor2.wav",
+  "audioId": 99
+ },
+ "snd_txttor3": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txttor3.wav",
+  "audioId": 100
+ },
+ "snd_txttor": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_txttor.wav",
+  "audioId": 101
+ },
+ "snd_dimbox": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_dimbox.wav",
+  "audioId": 102
+ },
+ "snd_textnoise": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_textnoise.wav",
+  "audioId": 103
+ },
+ "snd_phone": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_phone.wav",
+  "audioId": 104
+ },
+ "snd_battlefall": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_battlefall.wav",
+  "audioId": 105
+ },
+ "snd_noise": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_noise.wav",
+  "audioId": 106
+ },
+ "snd_spooky": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_spooky.wav",
+  "audioId": 107
+ },
+ "snd_item": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_item.wav",
+  "audioId": 108
+ },
+ "snd_power": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_power.wav",
+  "audioId": 109
+ },
+ "snd_swallow": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_swallow.wav",
+  "audioId": 110
+ },
+ "snd_select": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_select.wav",
+  "audioId": 111
+ },
+ "snd_movemenu": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_movemenu.wav",
+  "audioId": 112
+ },
+ "snd_buyitem": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_buyitem.wav",
+  "audioId": 113
+ },
+ "snd_squeak": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_squeak.wav",
+  "audioId": 114
+ },
+ "snd_yeah": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_yeah.wav",
+  "audioId": 115
+ },
+ "snd_heartshot": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_heartshot.wav",
+  "audioId": 116
+ },
+ "snd_saber3": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_saber3.ogg",
+  "audioId": 117
+ },
+ "snd_block2": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_block2.wav",
+  "audioId": 118
+ },
+ "snd_credit_s": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_credit_s.wav",
+  "audioId": 119
+ },
+ "snd_elecdoor_close": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_elecdoor_close.wav",
+  "audioId": 120
+ },
+ "snd_elecdoor_open": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_elecdoor_open.wav",
+  "audioId": 121
+ },
+ "snd_elecdoor_shut": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_elecdoor_shut.wav",
+  "audioId": 122
+ },
+ "snd_elecdoor_shutheavy": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_elecdoor_shutheavy.wav",
+  "audioId": 123
+ },
+ "snd_lightswitch": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_lightswitch.wav",
+  "audioId": 124
+ },
+ "snd_bomb": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_bomb.wav",
+  "audioId": 125
+ },
+ "snd_mtt_hit": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt_hit.wav",
+  "audioId": 126
+ },
+ "snd_mtt_prebomb": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt_prebomb.wav",
+  "audioId": 127
+ },
+ "snd_mtt_burst": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_mtt_burst.wav",
+  "audioId": 128
+ },
+ "snd_screenshake": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_screenshake.wav",
+  "audioId": 129
+ },
+ "snd_switchpull": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_switchpull.wav",
+  "audioId": 130
+ },
+ "snd_bigdoor_open": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_bigdoor_open.ogg",
+  "audioId": 131
+ },
+ "snd_switchpull_n": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_switchpull_n.wav",
+  "audioId": 132
+ },
+ "snd_mushroomdance": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "snd_mushroomdance.ogg",
+  "audioId": 132
+ },
+ "snd_fall2": {
+  "flags": 102,
+  "ext": ".ogg",
+  "file": "snd_fall2.ogg",
+  "audioId": 133
+ },
+ "snd_flameloop": {
+  "flags": 102,
+  "ext": ".ogg",
+  "file": "snd_flameloop.ogg",
+  "audioId": 134
+ },
+ "snd_heavydamage": {
+  "flags": 102,
+  "ext": ".ogg",
+  "file": "snd_heavydamage.ogg",
+  "audioId": 135
+ },
+ "snd_buzzing": {
+  "flags": 102,
+  "ext": ".ogg",
+  "file": "snd_buzzing.ogg",
+  "audioId": 136
+ },
+ "snd_curtgunshot": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "snd_curtgunshot.ogg",
+  "audioId": 136
+ },
+ "snd_bombsplosion": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_bombsplosion.ogg",
+  "audioId": 137
+ },
+ "snd_bombfall": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_bombfall.ogg",
+  "audioId": 138
+ },
+ "snd_instanoise": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_instanoise.ogg",
+  "audioId": 139
+ },
+ "snd_shakerbreaker": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_shakerbreaker.ogg",
+  "audioId": 140
+ },
+ "mus_st_happytown": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_st_happytown.ogg",
+  "audioId": 140
+ },
+ "mus_st_him": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_st_him.ogg",
+  "audioId": 140
+ },
+ "mus_st_meatfactory": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_st_meatfactory.ogg",
+  "audioId": 140
+ },
+ "mus_st_troubledingle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_st_troubledingle.ogg",
+  "audioId": 140
+ },
+ "snd_ballchime": {
+  "flags": 100,
+  "ext": ".mp3",
+  "file": "snd_ballchime.ogg",
+  "audioId": 140
+ },
+ "snd_mysterygo": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "snd_mysterygo.ogg",
+  "audioId": 141
+ },
+ "snd_grandpatemi": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_grandpatemi.wav",
+  "audioId": 142
+ },
+ "snd_breaka": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_breaka.wav",
+  "audioId": 143
+ },
+ "snd_breakb": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_breakb.wav",
+  "audioId": 144
+ },
+ "snd_breakc": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_breakc.wav",
+  "audioId": 145
+ },
+ "snd_break1_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_break1_c.wav",
+  "audioId": 146
+ },
+ "snd_break2_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_break2_c.wav",
+  "audioId": 147
+ },
+ "snd_heal_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_heal_c.wav",
+  "audioId": 148
+ },
+ "snd_hurt1_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_hurt1_c.wav",
+  "audioId": 149
+ },
+ "snd_laz_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_laz_c.wav",
+  "audioId": 150
+ },
+ "snd_damage_c": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_damage_c.wav",
+  "audioId": 151
+ },
+ "snd_tempbell": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_tempbell.wav",
+  "audioId": 152
+ },
+ "snd_test": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_test.wav",
+  "audioId": 153
+ },
+ "mus_sfx_abreak2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_abreak2.ogg",
+  "audioId": 154
+ },
+ "mus_sfx_abreak": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_abreak.ogg",
+  "audioId": 155
+ },
+ "mus_sfx_a_target": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_target.ogg",
+  "audioId": 156
+ },
+ "mus_sfx_a_bullet": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_bullet.ogg",
+  "audioId": 157
+ },
+ "mus_sfx_a_swordappear": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_swordappear.ogg",
+  "audioId": 158
+ },
+ "mus_sfx_a_pullback": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_pullback.ogg",
+  "audioId": 159
+ },
+ "mus_sfx_a_lithit": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_lithit.ogg",
+  "audioId": 160
+ },
+ "mus_sfx_a_lithit2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_lithit2.ogg",
+  "audioId": 161
+ },
+ "mus_sfx_a_gigatalk": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_gigatalk.ogg",
+  "audioId": 162
+ },
+ "mus_sfx_a_grab": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_grab.ogg",
+  "audioId": 162
+ },
+ "mus_sfx_a_swipe": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_a_swipe.ogg",
+  "audioId": 163
+ },
+ "mus_sfx_sparkles": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_sparkles.ogg",
+  "audioId": 164
+ },
+ "mus_sfx_rainbowbeam_hold": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sfx_rainbowbeam_hold.ogg",
+  "audioId": 164
+ },
+ "mus_sfx_hypergoner_charge": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sfx_hypergoner_charge.ogg",
+  "audioId": 164
+ },
+ "mus_sfx_hypergoner_laugh": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sfx_hypergoner_laugh.ogg",
+  "audioId": 164
+ },
+ "mus_sfx_spellcast": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_spellcast.ogg",
+  "audioId": 165
+ },
+ "mus_sfx_star": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_star.ogg",
+  "audioId": 166
+ },
+ "mus_sfx_segapower": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_segapower.ogg",
+  "audioId": 167
+ },
+ "mus_sfx_segapower2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_segapower2.ogg",
+  "audioId": 168
+ },
+ "mus_sfx_rainbowbeam_1": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_rainbowbeam_1.ogg",
+  "audioId": 169
+ },
+ "mus_sticksnap": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sticksnap.ogg",
+  "audioId": 169
+ },
+ "mus_snowwalk": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_snowwalk.ogg",
+  "audioId": 169
+ },
+ "mus_wind": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_wind.ogg",
+  "audioId": 169
+ },
+ "mus_whoopee": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_whoopee.ogg",
+  "audioId": 169
+ },
+ "mus_rimshot": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_rimshot.ogg",
+  "audioId": 169
+ },
+ "mus_sfx_chainsaw": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sfx_chainsaw.ogg",
+  "audioId": 169
+ },
+ "mus_sfx_gunshot": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_gunshot.ogg",
+  "audioId": 170
+ },
+ "mus_sfx_frypan": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_frypan.ogg",
+  "audioId": 171
+ },
+ "mus_sfx_bookspin": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_bookspin.ogg",
+  "audioId": 172
+ },
+ "mus_piano1": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano1.ogg",
+  "audioId": 173
+ },
+ "mus_piano2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano2.ogg",
+  "audioId": 174
+ },
+ "mus_piano3": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano3.ogg",
+  "audioId": 175
+ },
+ "mus_piano4": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano4.ogg",
+  "audioId": 176
+ },
+ "mus_piano5": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano5.ogg",
+  "audioId": 177
+ },
+ "mus_piano6": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano6.ogg",
+  "audioId": 178
+ },
+ "mus_piano7": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano7.ogg",
+  "audioId": 179
+ },
+ "mus_piano8": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano8.ogg",
+  "audioId": 180
+ },
+ "mus_piano9": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_piano9.ogg",
+  "audioId": 181
+ },
+ "mus_pianoA": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_pianoA.ogg",
+  "audioId": 182
+ },
+ "mus_badnote1": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_badnote1.ogg",
+  "audioId": 183
+ },
+ "mus_badnote2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_badnote2.ogg",
+  "audioId": 184
+ },
+ "mus_badnote3": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_badnote3.ogg",
+  "audioId": 185
+ },
+ "mus_note1": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note1.ogg",
+  "audioId": 186
+ },
+ "mus_note2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note2.ogg",
+  "audioId": 187
+ },
+ "mus_note3": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note3.ogg",
+  "audioId": 188
+ },
+ "mus_note4": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note4.ogg",
+  "audioId": 189
+ },
+ "mus_note5": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note5.ogg",
+  "audioId": 190
+ },
+ "mus_note6": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_note6.ogg",
+  "audioId": 191
+ },
+ "mus_singF": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_singF.ogg",
+  "audioId": 192
+ },
+ "mus_singG": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_singG.ogg",
+  "audioId": 193
+ },
+ "mus_singvoice": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_singvoice.ogg",
+  "audioId": 194
+ },
+ "mus_ghostbattle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_ghostbattle.ogg",
+  "audioId": 194
+ },
+ "mus_story": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_story.ogg",
+  "audioId": 194
+ },
+ "mus_bad": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_bad.ogg",
+  "audioId": 194
+ },
+ "mus_toriel": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_toriel.ogg",
+  "audioId": 194
+ },
+ "mus_flowey": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_flowey.ogg",
+  "audioId": 194
+ },
+ "mus_prebattle1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_prebattle1.ogg",
+  "audioId": 194
+ },
+ "mus_tension": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_tension.ogg",
+  "audioId": 194
+ },
+ "mus_menu0": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu0.ogg",
+  "audioId": 194
+ },
+ "mus_menu1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu1.ogg",
+  "audioId": 194
+ },
+ "mus_menu2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu2.ogg",
+  "audioId": 194
+ },
+ "mus_menu3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu3.ogg",
+  "audioId": 194
+ },
+ "mus_menu4": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu4.ogg",
+  "audioId": 194
+ },
+ "mus_menu5": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu5.ogg",
+  "audioId": 194
+ },
+ "mus_menu6": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_menu6.ogg",
+  "audioId": 194
+ },
+ "mus_house1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_house1.ogg",
+  "audioId": 194
+ },
+ "mus_intronoise": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_intronoise.ogg",
+  "audioId": 194
+ },
+ "mus_cymbal": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cymbal.ogg",
+  "audioId": 194
+ },
+ "mus_silence": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_silence.ogg",
+  "audioId": 194
+ },
+ "mus_piano": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_piano.ogg",
+  "audioId": 194
+ },
+ "mus_boss1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_boss1.ogg",
+  "audioId": 194
+ },
+ "mus_house2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_house2.ogg",
+  "audioId": 194
+ },
+ "mus_ruins": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_ruins.ogg",
+  "audioId": 194
+ },
+ "mus_battle1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_battle1.ogg",
+  "audioId": 194
+ },
+ "mus_gameover": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_gameover.ogg",
+  "audioId": 194
+ },
+ "snd_gameover_broken": {
+  "flags": 101,
+  "ext": ".wav",
+  "file": "snd_gameover_broken.wav",
+  "audioId": 195
+ },
+ "mus_toomuch": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_toomuch.ogg",
+  "audioId": 195
+ },
+ "mus_dogshrine_1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogshrine_1.ogg",
+  "audioId": 195
+ },
+ "mus_dogshrine_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogshrine_2.ogg",
+  "audioId": 195
+ },
+ "mus_dogsong": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogsong.ogg",
+  "audioId": 195
+ },
+ "mus_papyrusboss": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_papyrusboss.ogg",
+  "audioId": 195
+ },
+ "mus_shop": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_shop.ogg",
+  "audioId": 195
+ },
+ "mus_town": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_town.ogg",
+  "audioId": 195
+ },
+ "mus_computer": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_computer.ogg",
+  "audioId": 195
+ },
+ "mus_mystery": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mystery.ogg",
+  "audioId": 195
+ },
+ "mus_snoresymphony": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_snoresymphony.ogg",
+  "audioId": 195
+ },
+ "mus_dogappear": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogappear.ogg",
+  "audioId": 195
+ },
+ "mus_wawa": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_wawa.ogg",
+  "audioId": 195
+ },
+ "mus_tv": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_tv.ogg",
+  "audioId": 195
+ },
+ "mus_date": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_date.ogg",
+  "audioId": 195
+ },
+ "mus_date_tense": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_date_tense.ogg",
+  "audioId": 195
+ },
+ "mus_date_fight": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_date_fight.ogg",
+  "audioId": 195
+ },
+ "mus_mysteriousroom2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mysteriousroom2.ogg",
+  "audioId": 195
+ },
+ "mus_snowy": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_snowy.ogg",
+  "audioId": 195
+ },
+ "mus_muscle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_muscle.ogg",
+  "audioId": 195
+ },
+ "mus_papyrus": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_papyrus.ogg",
+  "audioId": 195
+ },
+ "mus_tone2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_tone2.ogg",
+  "audioId": 195
+ },
+ "mus_tone3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_tone3.ogg",
+  "audioId": 195
+ },
+ "mus_dogmeander": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogmeander.ogg",
+  "audioId": 195
+ },
+ "mus_undynescary": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undynescary.ogg",
+  "audioId": 195
+ },
+ "mus_birdsong": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_birdsong.ogg",
+  "audioId": 195
+ },
+ "mus_chokedup": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_chokedup.ogg",
+  "audioId": 195
+ },
+ "mus_dummybattle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dummybattle.ogg",
+  "audioId": 195
+ },
+ "mus_ruinspiano": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_ruinspiano.ogg",
+  "audioId": 195
+ },
+ "mus_kingdescription": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_kingdescription.ogg",
+  "audioId": 195
+ },
+ "mus_race": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_race.ogg",
+  "audioId": 195
+ },
+ "mus_undynetruetheme": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undynetruetheme.ogg",
+  "audioId": 195
+ },
+ "mus_undynepiano": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undynepiano.ogg",
+  "audioId": 195
+ },
+ "mus_waterfall": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_waterfall.ogg",
+  "audioId": 195
+ },
+ "mus_waterquiet": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_waterquiet.ogg",
+  "audioId": 195
+ },
+ "mus_ambientwater": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_ambientwater.ogg",
+  "audioId": 195
+ },
+ "mus_undynefast": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undynefast.ogg",
+  "audioId": 195
+ },
+ "mus_undynetheme": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undynetheme.ogg",
+  "audioId": 195
+ },
+ "mus_fearsting": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_fearsting.ogg",
+  "audioId": 195
+ },
+ "mus_musicbox": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_musicbox.ogg",
+  "audioId": 195
+ },
+ "mus_rain": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_rain.ogg",
+  "audioId": 195
+ },
+ "mus_rain_deep": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_rain_deep.ogg",
+  "audioId": 195
+ },
+ "mus_napstahouse": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_napstahouse.ogg",
+  "audioId": 195
+ },
+ "mus_dununnn": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dununnn.ogg",
+  "audioId": 195
+ },
+ "mus_predummy": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_predummy.ogg",
+  "audioId": 195
+ },
+ "mus_napstachords": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_napstachords.ogg",
+  "audioId": 195
+ },
+ "mus_spoopy": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_spoopy.ogg",
+  "audioId": 195
+ },
+ "mus_spoopy_wave": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_spoopy_wave.ogg",
+  "audioId": 195
+ },
+ "mus_spoopy_holiday": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_spoopy_holiday.ogg",
+  "audioId": 195
+ },
+ "mus_undyneboss": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_undyneboss.ogg",
+  "audioId": 195
+ },
+ "mus_endingexcerpt1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_endingexcerpt1.ogg",
+  "audioId": 195
+ },
+ "mus_endingexcerpt2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_endingexcerpt2.ogg",
+  "audioId": 195
+ },
+ "mus_lab": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_lab.ogg",
+  "audioId": 195
+ },
+ "mus_mtgameshow": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mtgameshow.ogg",
+  "audioId": 195
+ },
+ "mus_mettatonbattle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettatonbattle.ogg",
+  "audioId": 195
+ },
+ "mus_hotel": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_hotel.ogg",
+  "audioId": 195
+ },
+ "mus_mettsad": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettsad.ogg",
+  "audioId": 195
+ },
+ "mus_spider": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_spider.ogg",
+  "audioId": 195
+ },
+ "mus_sansdate": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sansdate.ogg",
+  "audioId": 195
+ },
+ "mus_star": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_star.ogg",
+  "audioId": 195
+ },
+ "mus_news": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_news.ogg",
+  "audioId": 195
+ },
+ "mus_news_battle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_news_battle.ogg",
+  "audioId": 195
+ },
+ "mus_hotel_battle": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_hotel_battle.ogg",
+  "audioId": 195
+ },
+ "mus_core": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_core.ogg",
+  "audioId": 195
+ },
+ "mus_mettaton_ex": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettaton_ex.ogg",
+  "audioId": 195
+ },
+ "mus_mettaton_pretransform": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettaton_pretransform.ogg",
+  "audioId": 195
+ },
+ "mus_oogloop": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_oogloop.ogg",
+  "audioId": 195
+ },
+ "mus_anothermedium": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_anothermedium.ogg",
+  "audioId": 195
+ },
+ "mus_drone": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_drone.ogg",
+  "audioId": 195
+ },
+ "mus_mett_cheer": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mett_cheer.ogg",
+  "audioId": 195
+ },
+ "mus_mett_applause": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mett_applause.ogg",
+  "audioId": 195
+ },
+ "mus_alphysfix": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_alphysfix.ogg",
+  "audioId": 195
+ },
+ "mus_mettsmash": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_mettsmash.ogg",
+  "audioId": 196
+ },
+ "mus_rotate": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_rotate.ogg",
+  "audioId": 197
+ },
+ "mus_chime": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_chime.ogg",
+  "audioId": 198
+ },
+ "mus_confession": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_confession.ogg",
+  "audioId": 198
+ },
+ "mus_mettmusical1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettmusical1.ogg",
+  "audioId": 198
+ },
+ "mus_mettmusical2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettmusical2.ogg",
+  "audioId": 198
+ },
+ "mus_mettmusical3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettmusical3.ogg",
+  "audioId": 198
+ },
+ "mus_mettmusical4": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettmusical4.ogg",
+  "audioId": 198
+ },
+ "mus_create": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_create.ogg",
+  "audioId": 199
+ },
+ "mus_bgflameA": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_bgflameA.ogg",
+  "audioId": 199
+ },
+ "mus_deeploop2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_deeploop2.ogg",
+  "audioId": 199
+ },
+ "mus_elevator": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_elevator.ogg",
+  "audioId": 199
+ },
+ "mus_elevator_last": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_elevator_last.ogg",
+  "audioId": 199
+ },
+ "mus_operatile": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_operatile.ogg",
+  "audioId": 199
+ },
+ "mus_mettafly": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettafly.ogg",
+  "audioId": 199
+ },
+ "mus_myemeow": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_myemeow.ogg",
+  "audioId": 199
+ },
+ "mus_core_ambience": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_core_ambience.ogg",
+  "audioId": 199
+ },
+ "mus_ohyes": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_ohyes.ogg",
+  "audioId": 199
+ },
+ "mus_mt_yeah": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_mt_yeah.ogg",
+  "audioId": 200
+ },
+ "mus_sfx_cinematiccut": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_cinematiccut.ogg",
+  "audioId": 201
+ },
+ "mus_sfx_swipe": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_swipe.ogg",
+  "audioId": 202
+ },
+ "mus_explosion": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_explosion.ogg",
+  "audioId": 203
+ },
+ "mus_sfx_eyeflash": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_eyeflash.ogg",
+  "audioId": 204
+ },
+ "mus_bergentruckung": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_bergentruckung.ogg",
+  "audioId": 204
+ },
+ "mus_endarea_partb": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_endarea_partb.ogg",
+  "audioId": 204
+ },
+ "mus_birdnoise": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_birdnoise.ogg",
+  "audioId": 204
+ },
+ "mus_smallshock": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_smallshock.ogg",
+  "audioId": 204
+ },
+ "mus_churchbell": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_churchbell.ogg",
+  "audioId": 204
+ },
+ "mus_barrier": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_barrier.ogg",
+  "audioId": 204
+ },
+ "mus_vsasgore": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_vsasgore.ogg",
+  "audioId": 204
+ },
+ "mus_endarea_parta": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_endarea_parta.ogg",
+  "audioId": 204
+ },
+ "mus_coretransition": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_coretransition.ogg",
+  "audioId": 204
+ },
+ "mus_sfx_oh": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_oh.ogg",
+  "audioId": 205
+ },
+ "mus_sfx_generate": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_generate.ogg",
+  "audioId": 206
+ },
+ "mus_sfx_yowl": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_yowl.ogg",
+  "audioId": 207
+ },
+ "mus_sfx_ahh": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_ahh.ogg",
+  "audioId": 208
+ },
+ "mus_sfx_voice_triple": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_voice_triple.ogg",
+  "audioId": 209
+ },
+ "mus_sfx_voice_jafe": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_voice_jafe.ogg",
+  "audioId": 210
+ },
+ "mus_sfx_ted": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_ted.ogg",
+  "audioId": 211
+ },
+ "mus_sfx_voice_ted": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_voice_ted.ogg",
+  "audioId": 212
+ },
+ "mus_yourbestfriend_3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_yourbestfriend_3.ogg",
+  "audioId": 212
+ },
+ "mus_repeat_1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_repeat_1.ogg",
+  "audioId": 212
+ },
+ "mus_repeat_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_repeat_2.ogg",
+  "audioId": 212
+ },
+ "mus_f_intro": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_intro.ogg",
+  "audioId": 212
+ },
+ "mus_f_laugh": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_laugh.ogg",
+  "audioId": 213
+ },
+ "mus_f_alarm": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_alarm.ogg",
+  "audioId": 213
+ },
+ "mus_f_noise": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_noise.ogg",
+  "audioId": 214
+ },
+ "mus_f_part1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_part1.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_1.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_2.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_3.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_4": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_4.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_5": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_5.ogg",
+  "audioId": 214
+ },
+ "mus_f_6s_6": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_6s_6.ogg",
+  "audioId": 214
+ },
+ "mus_f_part2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_part2.ogg",
+  "audioId": 214
+ },
+ "mus_f_part3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_part3.ogg",
+  "audioId": 214
+ },
+ "mus_f_endnote": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_endnote.ogg",
+  "audioId": 215
+ },
+ "mus_f_finale_1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_finale_1.ogg",
+  "audioId": 215
+ },
+ "mus_f_finale_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_finale_2.ogg",
+  "audioId": 215
+ },
+ "mus_f_finale_3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_finale_3.ogg",
+  "audioId": 215
+ },
+ "mus_f_finale_1_l": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_finale_1_l.ogg",
+  "audioId": 215
+ },
+ "mus_f_saved": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_saved.ogg",
+  "audioId": 215
+ },
+ "mus_f_destroyed": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_destroyed.ogg",
+  "audioId": 215
+ },
+ "mus_f_destroyed2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_destroyed2.ogg",
+  "audioId": 215
+ },
+ "mus_f_destroyed3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_destroyed3.ogg",
+  "audioId": 215
+ },
+ "mus_f_glock": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_glock.ogg",
+  "audioId": 216
+ },
+ "mus_f_orchhit": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_orchhit.ogg",
+  "audioId": 217
+ },
+ "mus_f_orchhit_l": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_f_orchhit_l.ogg",
+  "audioId": 218
+ },
+ "mus_f_wind1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_wind1.ogg",
+  "audioId": 218
+ },
+ "mus_f_wind2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_wind2.ogg",
+  "audioId": 218
+ },
+ "mus_f_newlaugh": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_newlaugh.ogg",
+  "audioId": 218
+ },
+ "mus_f_newlaugh_low": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_f_newlaugh_low.ogg",
+  "audioId": 218
+ },
+ "mus_sfx_gigapunch": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_sfx_gigapunch.ogg",
+  "audioId": 219
+ },
+ "mus_story_stuck": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_story_stuck.ogg",
+  "audioId": 219
+ },
+ "mus_amalgam": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_amalgam.ogg",
+  "audioId": 219
+ },
+ "mus_woofenstein": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_woofenstein.ogg",
+  "audioId": 219
+ },
+ "mus_disturbing": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_disturbing.ogg",
+  "audioId": 219
+ },
+ "mus_woofenstein_loop": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_woofenstein_loop.ogg",
+  "audioId": 219
+ },
+ "mus_temvillage": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_temvillage.ogg",
+  "audioId": 219
+ },
+ "mus_temshop": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_temshop.ogg",
+  "audioId": 219
+ },
+ "mus_creepy_ambience": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_creepy_ambience.ogg",
+  "audioId": 219
+ },
+ "mus_hereweare": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_hereweare.ogg",
+  "audioId": 219
+ },
+ "mus_z_ending": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_z_ending.ogg",
+  "audioId": 219
+ },
+ "mus_x_undyne": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_x_undyne.ogg",
+  "audioId": 219
+ },
+ "mus_x_undyne_pre": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_x_undyne_pre.ogg",
+  "audioId": 219
+ },
+ "mus_mettaton_neo": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mettaton_neo.ogg",
+  "audioId": 219
+ },
+ "mus_zz_megalovania": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_zz_megalovania.ogg",
+  "audioId": 219
+ },
+ "mus_zzz_c2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_zzz_c2.ogg",
+  "audioId": 219
+ },
+ "mus_zzz_c": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_zzz_c.ogg",
+  "audioId": 219
+ },
+ "mus_dialup_0": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_0.ogg",
+  "audioId": 220
+ },
+ "mus_dialup_1": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_1.ogg",
+  "audioId": 221
+ },
+ "mus_dialup_2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_2.ogg",
+  "audioId": 222
+ },
+ "mus_dialup_3": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_3.ogg",
+  "audioId": 223
+ },
+ "mus_dialup_4": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_4.ogg",
+  "audioId": 224
+ },
+ "mus_dialup_5": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_dialup_5.ogg",
+  "audioId": 225
+ },
+ "mus_fallendown2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_fallendown2.ogg",
+  "audioId": 225
+ },
+ "mus_dontgiveup": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dontgiveup.ogg",
+  "audioId": 225
+ },
+ "mus_xpart_a": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_xpart_a.ogg",
+  "audioId": 225
+ },
+ "mus_xpart_b": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_xpart_b.ogg",
+  "audioId": 225
+ },
+ "mus_xpart": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_xpart.ogg",
+  "audioId": 225
+ },
+ "mus_xpart_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_xpart_2.ogg",
+  "audioId": 225
+ },
+ "mus_xpart_back": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_xpart_back.ogg",
+  "audioId": 225
+ },
+ "mus_reunited": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_reunited.ogg",
+  "audioId": 225
+ },
+ "mus_leave": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_leave.ogg",
+  "audioId": 225
+ },
+ "mus_a2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_a2.ogg",
+  "audioId": 225
+ },
+ "mus_mode": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_mode.ogg",
+  "audioId": 225
+ },
+ "mus_wrongworld": {
+  "flags": 100,
+  "ext": ".mp3",
+  "file": "mus_wrongworld.ogg",
+  "audioId": 225
+ },
+ "mus_smile": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_smile.ogg",
+  "audioId": 225
+ },
+ "mus_wrongnumbersong": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_wrongnumbersong.ogg",
+  "audioId": 225
+ },
+ "mus_dance_of_dog": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dance_of_dog.ogg",
+  "audioId": 225
+ },
+ "mus_dogroom": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dogroom.ogg",
+  "audioId": 225
+ },
+ "mus_coolbeat": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_coolbeat.ogg",
+  "audioId": 225
+ },
+ "mus_options_winter": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_options_winter.ogg",
+  "audioId": 225
+ },
+ "mus_options_fall": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_options_fall.ogg",
+  "audioId": 225
+ },
+ "mus_harpnoise": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_harpnoise.ogg",
+  "audioId": 225
+ },
+ "mus_options_summer": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_options_summer.ogg",
+  "audioId": 225
+ },
+ "mus_battle2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_battle2.ogg",
+  "audioId": 225
+ },
+ "mus_sigh_of_dog": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_sigh_of_dog.ogg",
+  "audioId": 225
+ },
+ "mus_drumcuica": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_drumcuica.ogg",
+  "audioId": 226
+ },
+ "mus_drumcuica2": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_drumcuica2.ogg",
+  "audioId": 227
+ },
+ "mus_drumcymbal": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_drumcymbal.ogg",
+  "audioId": 228
+ },
+ "mus_drumkick": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_drumkick.ogg",
+  "audioId": 229
+ },
+ "mus_drumsnare": {
+  "flags": 101,
+  "ext": ".ogg",
+  "file": "mus_drumsnare.ogg",
+  "audioId": 230
+ },
+ "mus_cast_1": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_1.ogg",
+  "audioId": 230
+ },
+ "mus_cast_2": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_2.ogg",
+  "audioId": 230
+ },
+ "mus_cast_3": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_3.ogg",
+  "audioId": 230
+ },
+ "mus_cast_4": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_4.ogg",
+  "audioId": 230
+ },
+ "mus_cast_5": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_5.ogg",
+  "audioId": 230
+ },
+ "mus_cast_6": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_6.ogg",
+  "audioId": 230
+ },
+ "mus_cast_7": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_cast_7.ogg",
+  "audioId": 230
+ },
+ "mus_crickets": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_crickets.ogg",
+  "audioId": 230
+ },
+ "mus_doorclose": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_doorclose.ogg",
+  "audioId": 230
+ },
+ "mus_dooropen": {
+  "flags": 100,
+  "ext": ".ogg",
+  "file": "mus_dooropen.ogg",
+  "audioId": 230
+ },
+ "mus_express_myself": {
+  "flags": 100,
+  "ext": ".mp3",
+  "file": "mus_express_myself.ogg",
+  "audioId": 230
+ }
+}
