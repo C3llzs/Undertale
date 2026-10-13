@@ -29,6 +29,53 @@ body.touch .utm{top:calc(env(safe-area-inset-top) + 4px);left:calc(env(safe-area
 #uthint{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 2px);transform:translateX(-50%);z-index:40;min-width:96px;height:28px;padding:0 12px;display:none;align-items:center;justify-content:center;font:12px/1 monospace;color:#bbb;opacity:.85;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;white-space:nowrap}
 body.uihidden #uthinttxt,body.uihidden #touch,body.uihidden #utbar,body.uihidden #utset{display:none !important}
 #tfs{bottom:calc(env(safe-area-inset-bottom) + 34px) !important}
+
+/* ---- loading screen (progress bar + screenshots + fun facts) ---- */
+#ldr{--y:#ff0;--r:#f00;position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:#000;color:#fff;font:600 15px/1.45 'Determination Mono','DTM-Mono','Courier New',ui-monospace,Menlo,Consolas,monospace;overflow:auto;-webkit-user-select:none;user-select:none;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+#ldr.on{display:flex}
+#ldr.out{opacity:0;transition:opacity .45s steps(6);pointer-events:none}
+#ldr .ldr-in{width:min(560px,92vw);margin:auto;padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:14px}
+#ldr .ldr-title{text-align:center;font-size:20px;letter-spacing:.2em;text-transform:uppercase;line-height:1.1}
+#ldr .ldr-title small{display:block;margin-top:5px;font-size:11px;letter-spacing:.3em;color:#888}
+#ldr .ldr-shot{width:min(100%,max(200px,calc((100vh - 370px) * 1.3334)));width:min(100%,max(200px,calc((100dvh - 370px) * 1.3334)))}
+#ldr .ldr-frame{position:relative;aspect-ratio:4/3;border:4px solid #fff;background:#000;box-sizing:border-box;overflow:hidden}
+#ldr .ldr-frame img{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;opacity:0;transition:opacity .6s steps(5)}
+#ldr .ldr-frame img.on{opacity:1}
+#ldr .ldr-cap{margin-top:7px;text-align:center;font-size:11px;letter-spacing:.06em;color:#9a9a9a;min-height:1.5em}
+#ldr .ldr-pips{display:flex;justify-content:center;gap:6px;margin-top:5px}
+#ldr .ldr-pips i{display:block;width:8px;height:8px;background:#444;cursor:pointer}
+#ldr .ldr-pips i.on{background:var(--y)}
+#ldr .ldr-prog{width:100%}
+#ldr .ldr-bar{display:flex;align-items:center;gap:10px;margin-top:16px}
+#ldr .ldr-lab{font-size:13px;letter-spacing:.1em}
+#ldr .ldr-track{position:relative;flex:1;height:18px;background:var(--r)}
+#ldr .ldr-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--y)}
+#ldr .ldr-heart{position:absolute;bottom:100%;left:0;width:18px;height:16px;margin:0 0 3px -9px;image-rendering:pixelated;animation:ldrbob .6s steps(2) infinite}
+@keyframes ldrbob{50%{transform:translateY(-2px)}}
+#ldr .ldr-pct{min-width:8.2ch;text-align:right;font-size:13px;letter-spacing:.04em}
+#ldr .ldr-status{margin-top:7px;font-size:12px;color:#aaa;text-align:center;letter-spacing:.04em;min-height:1.5em}
+#ldr .ldr-status.busy::after{content:'';animation:ldrdots 1.2s steps(1) infinite}
+@keyframes ldrdots{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+#ldr .ldr-fact{width:100%;box-sizing:border-box;border:4px solid #fff;padding:10px 14px 12px;background:#000;cursor:pointer;min-height:120px}
+#ldr .ldr-fl{display:flex;justify-content:space-between;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--y);margin-bottom:6px}
+#ldr .ldr-next{color:#777;white-space:nowrap}
+#ldr .ldr-ft{position:relative;display:flex;gap:.6em;font-size:15px}
+#ldr .ldr-ft .star{flex:none}
+#ldr .ldr-txt{position:relative;flex:1}
+#ldr .ldr-ghost{visibility:hidden}
+#ldr .ldr-live{position:absolute;left:0;top:0;right:0}
+@media (max-height:560px) and (orientation:landscape){
+  #ldr .ldr-in{width:min(920px,96vw);display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"shot title" "shot prog" "shot fact";align-content:center;align-items:start;justify-items:stretch;column-gap:22px;row-gap:10px;padding:10px 0}
+  #ldr .ldr-title{grid-area:title;text-align:left;font-size:17px}
+  #ldr .ldr-shot{grid-area:shot;width:min(44vw,calc((100vh - 70px) * 1.3334));width:min(44vw,calc((100dvh - 70px) * 1.3334))}
+  #ldr .ldr-prog{grid-area:prog}
+  #ldr .ldr-bar{margin-top:14px}
+  #ldr .ldr-status{text-align:left}
+  #ldr .ldr-fact{grid-area:fact;min-height:0;padding:8px 12px 10px}
+  #ldr .ldr-ft{font-size:13px}
+}
+@media (max-width:380px){#ldr .ldr-title{font-size:17px}#ldr .ldr-ft{font-size:14px}}
+@media (prefers-reduced-motion:reduce){#ldr .ldr-heart,#ldr .ldr-status.busy::after{animation:none}#ldr.out,#ldr .ldr-frame img{transition:none}}
 </style></head>
 <body><div id="box"><h2>Undertale Port <small style="color:#9bf">Fan-Project</small></h2>
 <p id="boxinfo">An unofficial, fan-made HTML5 port of Undertale.</p>
@@ -46,6 +93,154 @@ body.uihidden #uthinttxt,body.uihidden #touch,body.uihidden #utbar,body.uihidden
 <div id="utbar"><div class="row"><button class="utb" id="utload" tabindex="-1" aria-label="Load File"></button><button class="utb" id="utsave" tabindex="-1" aria-label="Save File"></button></div><div id="uttoast"></div></div>
 <div class="utm" id="utset"><button id="utsetbtn" tabindex="-1" aria-label="Settings"></button></div><div id="utmenu"></div>
 <input id="utpick" type="file" multiple style="display:none"><input id="musicpick" type="file" multiple accept="audio/*,.ogg,.mp3,.wav,.flac" style="display:none">
+
+<div id="ldr" role="dialog" aria-label="Loading" aria-busy="true"><div class="ldr-in">
+<div class="ldr-title"><span id="ldrT"></span><small id="ldrS"></small></div>
+<div class="ldr-shot"><div class="ldr-frame"><img id="ldrA" alt=""><img id="ldrB" alt=""></div><div class="ldr-cap" id="ldrCap"></div><div class="ldr-pips" id="ldrPips"></div></div>
+<div class="ldr-prog"><div class="ldr-bar"><span class="ldr-lab" id="ldrL"></span><div class="ldr-track" id="ldrTrack" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ldr-fill" id="ldrFill"></div><canvas class="ldr-heart" id="ldrHeart" width="9" height="8"></canvas></div><span class="ldr-pct" id="ldrPct">0 / 100</span></div><div class="ldr-status busy" id="ldrStatus" aria-live="polite"></div></div>
+<div class="ldr-fact" id="ldrFactBox"><div class="ldr-fl"><span id="ldrFL"></span><span class="ldr-next" id="ldrNext"></span></div><div class="ldr-ft"><span class="star">*</span><span class="ldr-txt"><span class="ldr-ghost" id="ldrGhost"></span><span class="ldr-live" id="ldrFact"></span></span></div></div>
+</div></div>
+<script id="ldr-js">
+/* Loading screen: window.UTLoader.{show,set,dl,tick,done,hide}. Real screenshots from this port are embedded below. */
+(function () {
+  'use strict';
+  var IMG = {"intro": "iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgBAMAAADH/8HXAAAAFVBMVEX////AgiaFSh1kMhRKKQssFwgAAACjVBDOAAAKGElEQVR42u2d65WjOBBGv9kzCSgFpUAKSmFTUFCksCmQAikoBaWwP8A8jMC8hI1965yZdmOs7rlzXVIJIf/xIo7EPyAAIAABCEACgAAEIAAJAAIQgAAkAAhAAAKQACAAAQhAAoAABCAACQACEIAAJAAIQAACkAAgAAEIQAKAAAQgAAkAAhCAAAQgAUAAAhCABAABCEAAEgAEIAABSAAQgAD8jfh76NX/fQeEfzGQtzAAAUgAEIAABCABQAACEIAEAAEIQAASAAQgAL89/n7TP8ZJUggYiIFzYRQlmeGh2B0+wT5JslaqMBADkwJGY1rpBlJKiiae5F/77XWJEAPvBTA+C5g4sj2se30EAzGwFS6+PLI5AdrXWREDMfDR4Sbz4nhseKgHvlhBDLwPQKNoZgeIpwt4lYIYeCOAS5pFc7aAFymIgbcBaOKsZwtPvSxCXnb7GIiBL9NgzPTTCoOBGLh6qLcvCdplBTEQAwFIfATAFdXuniRoMBAD3xrFcBwZp8NKB0AMXJsCD8zIXFreYCAAAQjAT4nXnawFIAZq9VW3eH5hgYEYeL3gJgLwPvEdq/RNsN3fkkytyMoEDEwmpVR+6o9tXCvdOlZHqVkTPVoZ3fjoKgykF84bYcbaAEAM3Dwu21OLBN7CGPjeQeDycQtADMwUrVtzC2AKAGJgohM2yzlsTzfsFo+SA8mBmXNgWkHulbtJXD8f+FyXnHEdxD3vkuB4C2PgagNPuYLhBvvFWHvhPwcDb2egbEh2pYebtVIYtddMSTMj/fPjwGFxMXOv3JGMGJSaEmTfGAxcUUGcXammZKwwEAP7JGga57qBmrWNg2ZXCnySq6olSXU1aCNUwkDGgYqm3xzGRqvQpz6raMPDvK37CFZ9zRGloo7NULBWEUO4qCvGwIPxxx959erPlTOjXncw7oujQdvesri9/BFD/03coB+fK/f9tXBsrLNp0Wzj4F7/7MNoM7gQZyxrYzDwqSe2S8VJ2H9z21tvGsbAuwA0V4u02JwzGPhrBuaLHWtg3HkLZzDwJr2wie1/uhmOBAff2PrsO4zmB4LuxGlCDLzLOLDrG2up6LvIWiqOmbd9TvtMATHwJgDHktWJR9p7u7DZ+sSpAmLgzXKgkYqxdoUuvsHXPXmPgb+QA0eK1VJdD78cTILb+ufJR+pg4K/Uwmac92rV4zrWnKjZQovFyYsVMPAOvbCJQ1WKTrxiqKCtd32610Zx3dmrZTDwXgDjIBcViaPZ0m4uATHwDgDTiS05JxzzXmE7X0AM/HWAxZsFxMAbADTDD46LfTncFcLDCyQ5k2AOATHwNgCHNWvdqleP5mIy3OFmsguIgbcDGCeVyJE6ZEMnnEdADDwa+WdjnuuQaBpvHlMxk6fzVMYnXwrBwBsDjHHum4zd8NmXQjDwPjkw3RMbnaHE+qFjkeu+TQz8dIBtp1pMEmGcpL9CW6vh5VND9kEgBgLwrVUIBv46wBX3npjMAmIgAJfGfkbG5hUQAz+9Etkxt7J+PuZVIWIkRWuzbh6DgfcAaE48a5vOMVRZdy/CwHsAtCee9VQ7vxBQUmUxkHHgW8LGqNw7+mLg7wJckwIlp8oFAGLgW6K2UuXybuKGgR8OsNg+BrPFeT/cOVUWAz85cs/GVNa13eGacNLqfU9femokKdjM+1hi4Icb2KyJWpsIY9C5czLBso/0z48DY57z7ToBGUiTAzcpeOISPvMtb2Fy4NF+cJMLRisLhxeNGnNNCsRAAKYFrKprBMTAzwcY7IY1pyaeMndiaqdKVvk/0AYDbzAO3JKKjFkrYN1voZ8QMAZX57cPA+9hoML6myrDpmZlJdlJ+WIqufqij1jHwDsYmNNtqal0Ql+bmMpVVXHVr4CBtwAYTj5vGjaEum62B6lVOWOu+nhNDLxFDownnzeNSpKCk5ptggthIAaO6wbzsh4J+/yruvV/7rEta3EhQAy8yzgw1pLtHTNh8u0JnkcZxVBUDgMxcDpSW+pk289lPRSujpJsfe3HzGHgLQxsqlUzGO6Z4VdJMR7f2iVKxtaKGIiBzwLGSZ0RB38Gh/ZsnNXOeLuqGXBK0R2rqzHw297CJq6+W3P3FqquV51eGANnkqB50U/v88/ZR7mtIkpd0W2dw0AMTPTFvXBDJfcmv04zIxW1JFfU9TgxYuDPjwOfBnemvYqmaM1kC8uNA8HWsaDgKtWSUyWpshqODTHw1w0Mg8UDdlgjBEl2eP3MbJ0XrMY9eVF1RjIOxMCBgo14NlWhhoeW9mD96up4zXosDLyfga1aYd+zO7IhBlKJAJAAIAABCEACgAAEIAAJAAIQgAAkUnFsPvBfAGIgAAEIQAASAAQgAAFIABCAAAQgAUAAAhCABAABCEAAEgAEIAABSAAQgAAEIAFAAAIQgAQAAQhAABIABCAAAUgAEIAABCAACQACEIAAJAB4P4Blme8Xy9k2BgIQgEQbJ+0jXUry7Vd5jR49n9M/VT6fMjq3lB//lWivb/DVAwz86rdwKe8bIx4PSnk/c0731OBVz+G9ugbK2ZOHDb54gIFfngNXhH9Xy14YiIF9LsshXzn1rT3ky5JeGAO7XjhTfzhquWyE872QZekxkFJuWaFyIcmVvtyVxcpSV8zpYODB+HMkP5R6rmqbdORna+HxU8NXpRpvnyvThXP/qmlxTS38Gwau6B3XPVX62wLEwA8FuND9TZ+6sYAY+LE5cKH7y94zYiAG0okQAAQgAAFIABCAAAQgAUAAfmycfF04PdFS7p986S+7JJ/0B5vHwG8zMMPigw+fLsLAdxo4uB7rJxfaNFwRnUyU44vI6YvJqVcNHnRZcP76MgZ+9Vt4dgVyuWKxdOrI6wa7cwbrqHMvhMbA2/TCGaLNb2uym8fAHzTQL9cQiy/tFzCX8w36RHsfNDbEwI/Ngf7ck/MtscbArwX4coGyH6h3xmrmd9zljoEfkQP94/++q0+7HtZPtJjePbR4P1FbA/uEXr4s394hY+DBYHUWBgIQgAAkAAhAAAKQACAAAQhAAoAABCAACQBeEwfXB/p+k9PmQbNczy8tAlzR6OC7FQ1266jHD9g35iffwmX3Z2ER4MkNjhYKjlcMsofqd+fApDG+nBxZsiux+/T+BumFMXB5XaCfduJlu+FkWfqZJVjrG9x/Dgbe9S08XbDip0tMH8Oz8ulsv8qNDQ2qP9Kumkmdg4HflAMTKcvPpa7phrrlyp8x/8TzDr1+8IuVXuzi+8uTCd6PtUhsG7gyC844uSa5sYvvDxv4WZFNRQz8iEpkzYcmzCyN1vKRVy/36ep6yy+GgW8N1khjIAABCEACgAAEIAAJAAIQgAAkAAhAAAKQACAAAQhAAoAABCAACQACEIAAJAAIQAACkAAgAAEIQAKAAAQgAAkAAhCAAAQgAUAAAhCABAABCEAAEgAEIAABSAAQgAAEILEm/gexpp7TYq0LWQAAAABJRU5ErkJggg==", "name": "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", "ruins": "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", "flowey": "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", "battle": "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"};
+  var LANG = 'en'; try { if (localStorage.getItem('utport:ui') === 'es') LANG = 'es'; } catch (e) { }
+  var RM = false; try { RM = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { }
+  var TXT = {
+    en: { t: 'Undertale Port', s: 'fan project', lab: 'LOAD', fl: 'Fun fact', next: 'tap for next',
+      st: { dl: 'Downloading game data', read: 'Reading game data', parse: 'Unpacking sprites, rooms and scripts', gfx: 'Warming up the graphics', start: 'Starting up', ready: 'Ready!' } },
+    es: { t: 'Undertale Port', s: 'proyecto de fans', lab: 'CARGA', fl: 'Dato curioso', next: 'toca para otro',
+      st: { dl: 'Descargando datos del juego', read: 'Leyendo datos del juego', parse: 'Desempaquetando sprites, salas y scripts', gfx: 'Calentando los gráficos', start: 'Iniciando', ready: '¡Listo!' } }
+  };
+  var SHOTS = [
+    { k: 'intro', en: 'Intro \u00b7 how it all begins', es: 'Intro \u00b7 as\u00ed empieza todo' },
+    { k: 'name', en: 'Naming screen \u00b7 every adventure needs a name', es: 'Pantalla de nombre \u00b7 toda aventura necesita un nombre' },
+    { k: 'ruins', en: 'The Ruins \u00b7 golden flowers, quiet halls', es: 'Las Ruinas \u00b7 flores doradas, pasillos silenciosos' },
+    { k: 'flowey', en: 'Howdy! Someone friendly is waiting', es: '\u00a1Hola! Alguien amistoso te espera' },
+    { k: 'battle', en: 'Your first battle \u00b7 mind the little heart', es: 'Tu primer combate \u00b7 cuida el corazoncito' }
+  ];
+  var FACTS = {
+    en: [
+      'Undertale was made almost entirely by one person. Toby Fox wrote the story, the code and the whole soundtrack.',
+      'Its Kickstarter in 2013 asked for $5,000. Backers pledged over $50,000.',
+      'The game was built in GameMaker. This port reads the same data file and replays it frame by frame.',
+      "Undertale draws everything at 320\u00d7240 and scales it up. That's why the pixels look so wonderfully chunky.",
+      "Most talking characters have their own typing sound, so you can tell who's speaking by ear.",
+      'Sans talks in Comic Sans and Papyrus in... Papyrus. Of course.',
+      'Megalovania is older than the game. Toby Fox wrote it years earlier for an EarthBound fan hack.',
+      'The official soundtrack has 101 tracks.',
+      'Undertale came out on September 15, 2015.',
+      'In most battles you can win without hurting anyone. Talk, joke, or show mercy.',
+      'Those twinkling yellow stars are SAVE points. In this port, saves live in your browser. Use Save File to keep a backup.',
+      'Keep an eye out for the Annoying Dog. It turns up in surprising places.',
+      'In an early build of this port, every letter drew itself on top of the others in one corner. Text is placed letter by letter.',
+      'A save file is just text: your name, LV, HP and more, one value per line.',
+      'Press F4 for fullscreen, or H to hide the on-screen buttons.'
+    ],
+    es: [
+      'Undertale lo hizo casi una sola persona. Toby Fox escribi\u00f3 la historia, el c\u00f3digo y toda la banda sonora.',
+      'Su Kickstarter de 2013 ped\u00eda 5.000 d\u00f3lares. Los mecenas aportaron m\u00e1s de 50.000.',
+      'El juego se hizo con GameMaker. Este port lee el mismo archivo de datos y lo reproduce cuadro a cuadro.',
+      'Undertale dibuja todo a 320\u00d7240 y lo ampl\u00eda. Por eso los p\u00edxeles se ven tan grandes y tan bonitos.',
+      'La mayor\u00eda de los personajes que hablan tienen su propio sonido de escritura, as\u00ed que los reconoces de o\u00eddo.',
+      'Sans habla en Comic Sans y Papyrus en... Papyrus. C\u00f3mo no.',
+      'Megalovania es anterior al juego. Toby Fox la compuso a\u00f1os antes para un hack de EarthBound hecho por fans.',
+      'La banda sonora oficial tiene 101 pistas.',
+      'Undertale sali\u00f3 el 15 de septiembre de 2015.',
+      'En casi todos los combates puedes ganar sin hacer da\u00f1o a nadie. Habla, bromea o muestra piedad.',
+      'Esas estrellas amarillas que brillan son puntos de guardado. En este port las partidas se guardan en tu navegador. Usa Save File para hacer una copia.',
+      'Atento al Perro Molesto. Aparece en sitios inesperados.',
+      'En una versi\u00f3n temprana de este port, todas las letras se dibujaban una encima de otra en una esquina. El texto se coloca letra por letra.',
+      'Un archivo de guardado es solo texto: tu nombre, LV, HP y m\u00e1s, un valor por l\u00ednea.',
+      'Pulsa F4 para pantalla completa, o H para ocultar los botones en pantalla.'
+    ]
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var el, imgs, pips, fill, heart, pctEl, track, statusEl, capEl, ghost, live, tx;
+  var active = false, ready = false, finishing = false;
+  var target = 0, shown = 0, creepTo = 0, raf = 0, lastPct = -1;
+  var shotI = 0, shotFlip = 0, shotT = 0, factOrder = [], factI = 0, typer = 0, nextT = 0, typed = true, curFact = '', doneT = 0;
+
+  function drawHeart() {
+    var c = $('ldrHeart'), g = c.getContext('2d'), rows = ['.##...##.', '#########', '#########', '#########', '.#######.', '..#####..', '...###...', '....#....'];
+    g.fillStyle = '#f00'; for (var y = 0; y < rows.length; y++) for (var x = 0; x < 9; x++) if (rows[y][x] === '#') g.fillRect(x, y, 1, 1);
+  }
+  function init() {
+    if (ready) return; ready = true;
+    el = $('ldr'); imgs = [$('ldrA'), $('ldrB')]; fill = $('ldrFill'); heart = $('ldrHeart'); pctEl = $('ldrPct'); track = $('ldrTrack');
+    statusEl = $('ldrStatus'); capEl = $('ldrCap'); ghost = $('ldrGhost'); live = $('ldrFact');
+    drawHeart();
+    var pw = $('ldrPips'); pips = [];
+    SHOTS.forEach(function (s, i) { var p = document.createElement('i'); p.onclick = function () { showShot(i); }; pw.appendChild(p); pips.push(p); });
+    $('ldrFactBox').addEventListener('click', function () { if (!typed) finishType(); else nextFact(); });
+  }
+  function applyLang() {
+    tx = TXT[LANG]; $('ldrT').textContent = tx.t; $('ldrS').textContent = tx.s; $('ldrL').textContent = tx.lab; $('ldrFL').textContent = tx.fl; $('ldrNext').textContent = '\u25b8 ' + tx.next;
+  }
+  function setStatus(key) { if (key && tx.st[key]) { statusEl.textContent = tx.st[key]; statusEl.className = 'ldr-status' + (key === 'ready' ? '' : ' busy'); } }
+
+  /* screenshots */
+  function showShot(i) {
+    clearTimeout(shotT); shotI = i; var s = SHOTS[i];
+    var nxt = imgs[shotFlip ^ 1], cur = imgs[shotFlip]; shotFlip ^= 1;
+    nxt.src = 'data:image/png;base64,' + IMG[s.k]; nxt.classList.add('on'); cur.classList.remove('on');
+    capEl.textContent = s[LANG] || s.en;
+    for (var k = 0; k < pips.length; k++) pips[k].className = k === i ? 'on' : '';
+    shotT = setTimeout(function () { showShot((shotI + 1) % SHOTS.length); }, 4300);
+  }
+
+  /* fun facts (typewriter) */
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function finishType() { clearInterval(typer); live.textContent = curFact; typed = true; schedNext(); }
+  function schedNext() { clearTimeout(nextT); nextT = setTimeout(nextFact, 5600); }
+  function nextFact() {
+    clearInterval(typer); clearTimeout(nextT);
+    var list = FACTS[LANG]; curFact = list[factOrder[factI++ % factOrder.length]];
+    ghost.textContent = curFact;
+    if (RM) { live.textContent = curFact; typed = true; schedNext(); return; }
+    var n = 0; live.textContent = ''; typed = false;
+    typer = setInterval(function () { n++; live.textContent = curFact.slice(0, n); if (n >= curFact.length) { clearInterval(typer); typed = true; schedNext(); } }, 26);
+  }
+
+  /* progress bar (eased, never goes backwards) */
+  function frame() {
+    raf = 0; if (!active) return;
+    if (creepTo > target) target = Math.min(creepTo, target + 0.0007);
+    shown += (target - shown) * 0.1; if (target - shown < 0.0008) shown = target;
+    var p = Math.round(shown * 100);
+    fill.style.width = (shown * 100).toFixed(1) + '%'; heart.style.left = (shown * 100).toFixed(1) + '%';
+    if (p !== lastPct) { lastPct = p; pctEl.textContent = p + ' / 100'; track.setAttribute('aria-valuenow', p); }
+    if (finishing && shown >= 0.999 && !doneT) { doneT = setTimeout(finish, 550); }
+    raf = requestAnimationFrame(frame);
+  }
+  function finish() {
+    if (!active) return; el.classList.add('out'); setTimeout(hide, RM ? 0 : 480);
+  }
+  function stop() { active = false; clearTimeout(shotT); clearTimeout(nextT); clearTimeout(doneT); clearInterval(typer); if (raf) cancelAnimationFrame(raf); raf = 0; doneT = 0; }
+  function hide() {
+    stop(); if (!el) return; el.classList.remove('on', 'out'); el.setAttribute('aria-busy', 'false');
+  }
+
+  window.UTLoader = {
+    show: function () {
+      if (active) return; init(); applyLang(); active = true; finishing = false; target = shown = creepTo = 0; lastPct = -1; doneT = 0;
+      el.classList.remove('out'); el.classList.add('on'); el.setAttribute('aria-busy', 'true');
+      setStatus('dl'); factOrder = shuffle(FACTS[LANG].map(function (_, i) { return i; })); factI = 0;
+      showShot(0); nextFact(); raf = requestAnimationFrame(frame);
+    },
+    /* p: 0..1 overall progress (never decreases); key: status text; creep: slowly drift up to this value while waiting */
+    set: function (p, key, creep) { if (!active) return; if (p > target) target = Math.min(1, p); creepTo = creep || 0; setStatus(key); },
+    /* download progress 0..1 -> first 62% of the bar */
+    dl: function (p) { if (!active) return; var v = 0.62 * Math.max(0, Math.min(1, p)); if (v > target) target = v; if (!finishing) setStatus('dl'); },
+    /* give the browser a moment to paint before a long synchronous step */
+    tick: function () { return new Promise(function (res) { var d = 0, go = function () { if (!d) { d = 1; res(); } }; setTimeout(go, 90); try { requestAnimationFrame(function () { requestAnimationFrame(go); }); } catch (e) { } }); },
+    done: function () { if (!active) return; target = 1; creepTo = 0; finishing = true; setStatus('ready'); clearTimeout(doneT); doneT = 0; setTimeout(function () { if (active) finish(); }, 3000); },
+    hide: hide
+  };
+})();
+</script>
 <script type="module">
 const M_parser=(()=>{
 
@@ -753,13 +948,13 @@ async function boot(list) {
   files = new Map(); for (const f of list) files.set(f.name, f); indexFiles();
   const wf = files.get('data.win') || [...files.values()].find(f => /\.win$/i.test(f.name)); if (!wf) return setMsg('data.win not found. Select the Undertale game folder (the one containing data.win).');
   autoMusic = await probe('music/mus_story.ogg');
-  setMsg('Reading data.win…'); const buf = await wf.arrayBuffer();
-  setMsg('Parsing…'); W = loadCode(parseWin(buf));
+  setMsg('Reading data.win…'); UTLoader.set(0.62, 'read'); const buf = await wf.arrayBuffer();
+  setMsg('Parsing…'); UTLoader.set(0.68, 'parse', 0.8); await UTLoader.tick(); W = loadCode(parseWin(buf)); UTLoader.set(0.82, 'gfx', 0.9); await UTLoader.tick();
   const store = new TexStore(W.textures, isTouchDevice() ? 22e6 : 70e6); window.__tex = store; const tex = store.proxy;
-  const base = new Set(); W.fonts.forEach(f => f.tp && base.add(f.tp.t)); for (const n of ['spr_undertaletitle', 'spr_heartsmall']) { const sp = W.sprites.find(s => s.name === n); if (sp) sp.frames.forEach(fr => fr && base.add(fr.t)); } store.pin = base; await store.need([...base]);
+  const base = new Set(); W.fonts.forEach(f => f.tp && base.add(f.tp.t)); for (const n of ['spr_undertaletitle', 'spr_heartsmall']) { const sp = W.sprites.find(s => s.name === n); if (sp) sp.frames.forEach(fr => fr && base.add(fr.t)); } store.pin = base; await store.need([...base]); UTLoader.set(0.93, 'start');
   const roomPages = r => { const R = W.rooms[r], s = new Set(base); if (R) { for (const i of R.instances) { const o = W.objects[i.obj]; if (o && o.sprite >= 0) for (const f of W.sprites[o.sprite].frames) if (f) s.add(f.t); } for (const t of R.tiles) { const b = W.backgrounds[t.bg]; if (b && b.tp) s.add(b.tp.t); } for (const b of R.backgrounds) { const d = b.bg >= 0 && W.backgrounds[b.bg]; if (d && d.tp) s.add(d.tp.t); } } return [...s]; };
   let rrWait = 0, rrFor = -1; const roomReady = r => { const need = roomPages(r); if (need.every(t => store.ready(t))) { rrWait = 0; return true; } store.need(need); if (rrFor !== r) { rrFor = r; rrWait = 0; } return ++rrWait > 300; };
-  const audio = window.__ac || new (window.AudioContext || window.webkitAudioContext)(); await audio.resume().catch(() => { });
+  UTLoader.set(0.96, 'start'); const audio = window.__ac || new (window.AudioContext || window.webkitAudioContext)(); await audio.resume().catch(() => { });
   const loadSound = async i => { const sd = W.sounds[i]; if (!sd) return null; let ab = null; const f = files.get(sd.file) || files.get(sd.name + '.ogg') || files.get(sd.name + '.wav') || normMap.get(nk(sd.file)) || normMap.get(nk(sd.name));
     if (f) ab = await f.arrayBuffer(); else if (autoMusic && sd.flags === 100) { try { const r = await cachedFetch('music/' + encodeURIComponent(sd.file)); ab = await r.arrayBuffer(); } catch { } } else if (sd.flags !== 100 && sd.audioId >= 0) { if (W.audio[sd.audioId]) ab = W.audio[sd.audioId].slice().buffer; else if (coreMode) { try { const r = await cachedFetch('game/sfx/' + sd.audioId + '.mp3'); ab = await r.arrayBuffer(); } catch { } } } /* flags 100 = streamed music whose .ogg lives outside data.win; its audioId is a shared placeholder clip (the endless 'wolf' sound), so stay silent instead */ if (!ab) return null;
     try { return await audio.decodeAudioData(ab); } catch (e) { console.warn('audio decode failed', sd.name); return null; } };
@@ -912,14 +1107,15 @@ async function startup() {
   const pb = document.getElementById('play'); pb.onclick = () => launch(SRC); setMsg(SRC === 'local' ? 'Game files found. Loading...' : 'Using the game files saved in this browser. Loading...'); launch(SRC);
 }
 async function launch(src) {
-  const pb = document.getElementById('play'); pb.disabled = true; window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
+  const pb = document.getElementById('play'); pb.disabled = true; UTLoader.show(); window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
   try {
     let list = [];
-    if (src === 'local') { coreMode = true; const ab = await loadCore(p => { document.title = 'Undertale Port ' + Math.round(p * 100) + '%'; }); document.title = 'Undertale Port'; list = [{ name: 'data.win', arrayBuffer: async () => ab }]; }
-    else if (src === 'legacy') { const resp = await fetch('data.win'); if (!resp.ok) throw new Error('data.win returned HTTP ' + resp.status); const blob = await resp.blob(); list = [new File([blob], 'data.win')]; }
+    if (src === 'local') { coreMode = true; const ab = await loadCore(p => { document.title = 'Undertale Port ' + Math.round(p * 100) + '%'; UTLoader.dl(p); }); document.title = 'Undertale Port'; list = [{ name: 'data.win', arrayBuffer: async () => ab }]; }
+    else if (src === 'legacy') { const resp = await fetch('data.win'); if (!resp.ok) throw new Error('data.win returned HTTP ' + resp.status); const total = +resp.headers.get('content-length') || 0; let blob; if (resp.body && total) { const rd = resp.body.getReader(), parts = []; let got = 0; for (; ;) { const r = await rd.read(); if (r.done) break; parts.push(r.value); got += r.value.length; UTLoader.dl(got / total); } blob = new Blob(parts); } else blob = await resp.blob(); list = [new File([blob], 'data.win')]; }
     else { const keys = await IDB.keys(); list = keys.map(k => ({ name: String(k), arrayBuffer: async () => (await IDB.get(k)).arrayBuffer() })); }
     pb.style.display = 'none'; await boot(list);
-  } catch (e) { console.error(e); document.getElementById('box').style.display = 'block'; setMsg('Could not load the game files: ' + (e && e.message)); pb.style.display = 'inline-block'; pb.disabled = false; }
+    if (running) UTLoader.done(); else { UTLoader.hide(); document.getElementById('box').style.display = 'block'; }
+  } catch (e) { console.error(e); UTLoader.hide(); document.getElementById('box').style.display = 'block'; setMsg('Could not load the game files: ' + (e && e.message)); pb.style.display = 'inline-block'; pb.disabled = false; }
 }
 document.getElementById('dir').onchange = e => ingest(e.target.files);
 document.getElementById('win').onchange = e => ingest(e.target.files);
