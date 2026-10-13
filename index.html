@@ -233,7 +233,7 @@ body.uihidden #uthinttxt,body.uihidden #touch,body.uihidden #utbar,body.uihidden
     /* p: 0..1 overall progress (never decreases); key: status text; creep: slowly drift up to this value while waiting */
     set: function (p, key, creep) { if (!active) return; if (p > target) target = Math.min(1, p); creepTo = creep || 0; setStatus(key); },
     /* download progress 0..1 -> first 62% of the bar */
-    dl: function (p) { if (!active) return; var v = 0.62 * Math.max(0, Math.min(1, p)); if (v > target) target = v; if (!finishing) setStatus('dl'); },
+    dl: function (p) { if (!active) return; creepTo = 0; var v = 0.62 * Math.max(0, Math.min(1, p)); if (v > target) target = v; if (!finishing) setStatus('dl'); },
     /* give the browser a moment to paint before a long synchronous step */
     tick: function () { return new Promise(function (res) { var d = 0, go = function () { if (!d) { d = 1; res(); } }; setTimeout(go, 90); try { requestAnimationFrame(function () { requestAnimationFrame(go); }); } catch (e) { } }); },
     done: function () { if (!active) return; target = 1; creepTo = 0; finishing = true; setStatus('ready'); clearTimeout(doneT); doneT = 0; setTimeout(function () { if (active) finish(); }, 3000); },
@@ -939,13 +939,13 @@ async function cachedFetch(url) {
   return resp;
 }
 async function loadCore(onp) {
-  const gz = typeof DecompressionStream !== 'undefined', resp = await cachedFetch(gz ? 'game/core.bin.gz' : 'game/core.bin');
-  // Exact sizes of the shipped files. Used when the server sends no (or an unreliable) Content-Length, which is common on mobile networks.
-  const KNOWN = gz ? 14908362 : 28722308; let total = +resp.headers.get('content-length') || 0; if (!total || resp.headers.get('content-encoding')) total = KNOWN; let got = 0;
-  if (!resp.body) { const buf = await resp.arrayBuffer(); if (gz) return await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer(); return buf; }
-  const counter = new TransformStream({ transform(ch, ctl) { got += ch.length; if (onp) onp(Math.min(0.99, got / total)); ctl.enqueue(ch); } });
-  let st = resp.body.pipeThrough(counter); if (gz) st = st.pipeThrough(new DecompressionStream('gzip'));
-  const out = await new Response(st).arrayBuffer(); if (onp) onp(1); return out;
+  const gz = typeof DecompressionStream !== 'undefined', url = gz ? 'game/core.bin.gz' : 'game/core.bin'; let cache = null, resp = null;
+  try { cache = await caches.open(CACHE_NAME); resp = await cache.match(url); } catch { cache = null; }
+  const hit = !!resp; if (!resp) { resp = await fetch(url); if (!resp.ok) throw new Error(url + ' returned HTTP ' + resp.status); }
+  const KNOWN = gz ? 14908362 : 28722308; let total = +resp.headers.get('content-length') || 0; if (!total || resp.headers.get('content-encoding')) total = KNOWN;
+  let blob; if (resp.body && resp.body.getReader) { const rd = resp.body.getReader(), parts = []; let got = 0; for (; ;) { const r = await rd.read(); if (r.done) break; parts.push(r.value); got += r.value.length; if (onp) onp(Math.min(0.99, got / total)); } blob = new Blob(parts); } else blob = new Blob([await resp.arrayBuffer()]);
+  if (!hit && cache) { try { cache.put(url, new Response(blob)).catch(() => { }); } catch { } }
+  const out = gz ? await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer() : await blob.arrayBuffer(); if (onp) onp(1); return out;
 }
 async function boot(list) {
   files = new Map(); for (const f of list) files.set(f.name, f); indexFiles();
@@ -1110,7 +1110,7 @@ async function startup() {
   const pb = document.getElementById('play'); pb.onclick = () => launch(SRC); setMsg(SRC === 'local' ? 'Game files found. Loading...' : 'Using the game files saved in this browser. Loading...'); launch(SRC);
 }
 async function launch(src) {
-  const pb = document.getElementById('play'); pb.disabled = true; UTLoader.show(); UTLoader.set(0.01, 'dl', 0.56); window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
+  const pb = document.getElementById('play'); pb.disabled = true; UTLoader.show(); UTLoader.set(0.01, 'dl', 0.1); window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
   try {
     let list = [];
     if (src === 'local') { coreMode = true; const ab = await loadCore(p => { document.title = 'Undertale Port ' + Math.round(p * 100) + '%'; UTLoader.dl(p); }); document.title = 'Undertale Port'; list = [{ name: 'data.win', arrayBuffer: async () => ab }]; }
