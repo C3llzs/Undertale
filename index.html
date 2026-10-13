@@ -76,32 +76,8 @@ body.uihidden #uthinttxt,body.uihidden #touch,body.uihidden #utbar,body.uihidden
 }
 @media (max-width:380px){#ldr .ldr-title{font-size:17px}#ldr .ldr-ft{font-size:14px}}
 @media (prefers-reduced-motion:reduce){#ldr .ldr-heart,#ldr .ldr-status.busy::after{animation:none}#ldr.out,#ldr .ldr-frame img{transition:none}}
-
-/* loading screen: real Undertale font (Determination Mono, rebuilt from the game's own pixel glyphs) + real logo */
-@font-face{font-family:'UT Determination Mono';src:url(data:font/woff;base64,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) format('woff');font-display:block}
-#ldr,#box{font-family:'UT Determination Mono','Determination Mono','Courier New',monospace}
-#ldr{font-size:16px;font-weight:400;line-height:24px;font-synthesis:none;-webkit-font-smoothing:none;text-rendering:optimizeSpeed}
-#ldr *{letter-spacing:0!important;text-transform:none!important;font-weight:400!important}
-#ldr .ldr-in{width:min(580px,92vw)}
-#ldr .ldr-title{align-self:stretch;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:16px;line-height:24px}
-#ldr .ldr-title small{font-size:16px;margin:0;color:#888}
-#ldr .ldr-logo{display:block;max-width:100%;height:auto;image-rendering:pixelated;image-rendering:crisp-edges}
-#ldr .ldr-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-#ldr .ldr-cap,#ldr .ldr-status,#ldr .ldr-lab,#ldr .ldr-pct,#ldr .ldr-fl,#ldr .ldr-ft,#ldr .ldr-next{font-size:16px}
-#ldr .ldr-cap{margin-top:8px;color:#aaa}
-#ldr .ldr-pct{min-width:9ch}
-#ldr .ldr-ft{line-height:24px}
-#ldr .ldr-status{margin-top:8px;min-height:24px}
-#ldr .ldr-shot{width:min(100%,max(200px,calc((100vh - 470px) * 1.3334)));width:min(100%,max(200px,calc((100dvh - 470px) * 1.3334)))}
-@media (min-width:720px) and (min-height:900px){#ldr .ldr-lab,#ldr .ldr-pct,#ldr .ldr-ft{font-size:32px;line-height:40px}#ldr .ldr-in{width:min(640px,92vw)}}
-#ldr .ldr-fl span{white-space:nowrap}
-@media (max-height:560px) and (orientation:landscape){#ldr .ldr-in{width:min(940px,96vw)}#ldr .ldr-title{align-items:flex-start}#ldr .ldr-shot{width:min(36vw,calc((100vh - 70px) * 1.3334));width:min(36vw,calc((100dvh - 70px) * 1.3334))}#ldr .ldr-cap,#ldr .ldr-status{margin-top:4px}}
 </style></head>
-<body><pre id="utfatal" onclick="this.style.display='none'" style="display:none;position:fixed;left:8px;right:8px;top:8px;z-index:200;margin:0;padding:10px 12px;background:#000;border:4px solid #f00;color:#fff;font:16px/24px 'UT Determination Mono',monospace;white-space:pre-wrap;word-break:break-word;max-height:80vh;overflow:auto"></pre>
-<script>(function(){var n=0;function show(m){if(n++>2)return;var e=document.getElementById('utfatal');e.style.display='block';e.textContent+=(e.textContent?'\n\n':'')+'* Something went wrong (tap to close):\n'+m;}
-addEventListener('error',function(ev){show((ev.message||'error')+(ev.filename?'\n'+String(ev.filename).split('/').pop()+':'+ev.lineno:''));});
-addEventListener('unhandledrejection',function(ev){var r=ev.reason;show('Promise: '+((r&&r.message)||r));});})();</script>
-<div id="box"><h2>Undertale Port <small style="color:#9bf">Fan-Project</small></h2>
+<body><div id="box"><h2>Undertale Port <small style="color:#9bf">Fan-Project</small></h2>
 <p id="boxinfo">An unofficial, fan-made HTML5 port of Undertale.</p>
 <button id="play" style="display:none;font-size:20px;padding:12px 28px;border:0;border-radius:4px;background:#fff;color:#000;cursor:pointer">&#9654; Play</button>
 <div id="setup" style="display:none">
@@ -119,7 +95,7 @@ addEventListener('unhandledrejection',function(ev){var r=ev.reason;show('Promise
 <input id="utpick" type="file" multiple style="display:none"><input id="musicpick" type="file" multiple accept="audio/*,.ogg,.mp3,.wav,.flac" style="display:none">
 
 <div id="ldr" role="dialog" aria-label="Loading" aria-busy="true"><div class="ldr-in">
-<div class="ldr-title"><img class="ldr-logo" id="ldrLogo" alt="UNDERTALE" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAAAdCAYAAAB439PxAAAB20lEQVR4nO3cPW7DMAyGYbFH6N6xp3TG5JQdu/cK7mRDKKyEDClaSt9niWHUovwDQV/kphQASCKllHK9Xtdtx7Isjw8SkaP967quR/s17XiOjeqD9TpYtfqcWdd6fTxut9u+fblc0q5zS+a9jqrbemY0znquRESOnjMRkbfwXgD4d7bBpx6EjvYx4ABII6WMEWesx7am65l98Mise9Y50gd/XU+kynyutnrbvm377yczHABpGHAAhLj3/c3+WcqckSqqHeuxdZTzfPM/S6T6+fjct9+/vx7u79GHKESqWM/0jRkOgDQMOADSEKmMx45w7pnT7Do6tRCp+tXNvNeeWlrMcACkYcABkGb4SBW1KuTpQ+vva6O9cBj1YmTNujJVs07Xe8cB64pkfQ2t7cwSqTQ01+QeZjgA0jDgAEjjjlSef4HXTDV7Rw9PpOp97ppjrUZYIdIYIVJFmeVes0oF4KUw4ABI81SkCitujFS1qD57ItVZLyuOVsu7cnFkhEjVatPzq32z3+tWLS1mOADSMOAASDNtpKrNEm3OqnvWT3C0+qAxcqTytDPavY6qpcUMB0AaBhwAaV4iUp31Ap5V7xU3Td3MKGFtc7T2iVT6WlrMcACkYcABAACv5xcb0N9dr8JF4wAAAABJRU5ErkJggg=="><span class="ldr-sr" id="ldrT"></span><small id="ldrS"></small></div>
+<div class="ldr-title"><span id="ldrT"></span><small id="ldrS"></small></div>
 <div class="ldr-shot"><div class="ldr-frame"><img id="ldrA" alt=""><img id="ldrB" alt=""></div><div class="ldr-cap" id="ldrCap"></div><div class="ldr-pips" id="ldrPips"></div></div>
 <div class="ldr-prog"><div class="ldr-bar"><span class="ldr-lab" id="ldrL"></span><div class="ldr-track" id="ldrTrack" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ldr-fill" id="ldrFill"></div><canvas class="ldr-heart" id="ldrHeart" width="9" height="8"></canvas></div><span class="ldr-pct" id="ldrPct">0 / 100</span></div><div class="ldr-status busy" id="ldrStatus" aria-live="polite"></div></div>
 <div class="ldr-fact" id="ldrFactBox"><div class="ldr-fl"><span id="ldrFL"></span><span class="ldr-next" id="ldrNext"></span></div><div class="ldr-ft"><span class="star">*</span><span class="ldr-txt"><span class="ldr-ghost" id="ldrGhost"></span><span class="ldr-live" id="ldrFact"></span></span></div></div>
@@ -196,16 +172,9 @@ addEventListener('unhandledrejection',function(ev){var r=ev.reason;show('Promise
     el = $('ldr'); imgs = [$('ldrA'), $('ldrB')]; fill = $('ldrFill'); heart = $('ldrHeart'); pctEl = $('ldrPct'); track = $('ldrTrack');
     statusEl = $('ldrStatus'); capEl = $('ldrCap'); ghost = $('ldrGhost'); live = $('ldrFact');
     drawHeart();
-    var lg = $('ldrLogo'); lg.onload = fitLogo; window.addEventListener('resize', fitLogo);
     var pw = $('ldrPips'); pips = [];
     SHOTS.forEach(function (s, i) { var p = document.createElement('i'); p.onclick = function () { showShot(i); }; pw.appendChild(p); pips.push(p); });
     $('ldrFactBox').addEventListener('click', function () { if (!typed) finishType(); else nextFact(); });
-  }
-  /* integer-scale the pixel logo so its pixels stay square */
-  function fitLogo() {
-    var im = $('ldrLogo'); if (!im || !im.naturalWidth || !el || !el.classList.contains('on')) return;
-    var avail = im.parentNode.clientWidth, nw = im.naturalWidth, k = Math.min(3, Math.floor(avail / nw));
-    im.style.width = (k >= 1 ? nw * k : avail) + 'px';
   }
   function applyLang() {
     tx = TXT[LANG]; $('ldrT').textContent = tx.t; $('ldrS').textContent = tx.s; $('ldrL').textContent = tx.lab; $('ldrFL').textContent = tx.fl; $('ldrNext').textContent = '\u25b8 ' + tx.next;
@@ -257,7 +226,7 @@ addEventListener('unhandledrejection',function(ev){var r=ev.reason;show('Promise
   window.UTLoader = {
     show: function () {
       if (active) return; init(); applyLang(); active = true; finishing = false; target = shown = creepTo = 0; lastPct = -1; doneT = 0;
-      el.classList.remove('out'); el.classList.add('on'); el.setAttribute('aria-busy', 'true'); fitLogo();
+      el.classList.remove('out'); el.classList.add('on'); el.setAttribute('aria-busy', 'true');
       setStatus('dl'); factOrder = shuffle(FACTS[LANG].map(function (_, i) { return i; })); factI = 0;
       showShot(0); nextFact(); raf = requestAnimationFrame(frame);
     },
@@ -778,4 +747,541 @@ class Game {
     c.restore();
   }
   fontOf() { return this.W.fonts[this.font] || this.W.fonts[0]; }
-  textWidth(s, f = this.fontOf()) { let m = 0; for (const line of this.lines(s)) { let w = 0; for (const ch of line) { const g = f.glyphs.get(ch.charCodeAt(0)); if (g) w += g
+  textWidth(s, f = this.fontOf()) { let m = 0; for (const line of this.lines(s)) { let w = 0; for (const ch of line) { const g = f.glyphs.get(ch.charCodeAt(0)); if (g) w += g.shift; } m = Math.max(m, w); } return m * f.sx; }
+  lines(s) { s = gstr(s); return s.replace(/\\#/g, '\u0001').replace(/#/g, '\n').replace(/\u0001/g, '#').split(/\r\n|\n|\r/); }
+  drawText(x, y, s, xs = 1, ys = 1, rot = 0, col = this.drawColor, alpha = this.drawAlpha, sep = -1, maxw = -1) {
+    const f = this.fontOf(); if (!f) return; const c = this.ctx; let lines = this.lines(s);
+    if (maxw > 0) { const out = []; for (const ln of lines) { let cur = ''; for (const wd of ln.split(' ')) { const t = cur ? cur + ' ' + wd : wd; if (this.textWidth(t, f) > maxw && cur) { out.push(cur); cur = wd; } else cur = t; } out.push(cur); } lines = out; }
+    const lh = (sep > 0 ? sep : f.lh * f.sy);
+    c.save(); c.translate(x, y); if (rot) c.rotate(-rot * PI / 180); c.scale(xs * f.sx, ys * f.sy); c.globalAlpha = alpha;
+    const tx = this.tex[f.tp.t]; if (this.tex.ready && !this.tex.ready(f.tp.t)) return;
+    let totalH = lines.length * lh / f.sy; let oy = this.valign === 1 ? -totalH / 2 : this.valign === 2 ? -totalH : 0;
+    for (const line of lines) {
+      let w = 0; for (const ch of line) { const g = f.glyphs.get(ch.charCodeAt(0)); if (g) w += g.shift; }
+      let cx = this.halign === 1 ? -w / 2 : this.halign === 2 ? -w : 0;
+      for (const ch of line) { const g = f.glyphs.get(ch.charCodeAt(0)); if (!g) continue;
+        if (g.w > 0 && g.h > 0) { const cv = this.tinted(`g${this.font}_${g.x}_${g.y}`, g.w, g.h, col & 0xffffff, gg => gg.drawImage(tx, f.tp.x + g.x, f.tp.y + g.y, g.w, g.h, 0, 0, g.w, g.h)); c.drawImage(cv, cx + g.off, oy); }
+        cx += g.shift; }
+      oy += lh / f.sy;
+    }
+    c.restore();
+  }
+  // ---------- variables ----------
+  inst(spec, I) {
+    const fr = this.frame;
+    if (spec === -1) return fr.self; if (spec === -2) return fr.other; if (spec === -5) return null; if (spec === -7) return null;
+    if (spec === -3 || spec === -4) return fr.self;
+    if (spec >= 100000) return this.byId.get(spec) || null;
+    const l = this.find(spec); return l[0] || null;
+  }
+  getVar(spec, name, idx, arr) {
+    const fr = this.frame;
+    if (name.startsWith('argument')) { if (name === 'argument') return fr.args[idx] ?? 0; if (name === 'argument_count') return fr.args.length; const m = /^argument(\d+)$/.exec(name); if (m) return fr.args[+m[1]] ?? 0; }
+    let o;
+    if (spec === -7) o = fr.locals; else if (spec === -5) o = this.globals; else { if (spec === -1 && name in BV) return BV[name].get(this, idx); const t = this.inst(spec); if (!t) { return spec === -1 || spec === -2 ? 0 : 0; } o = t; }
+    const v = o[name]; if (arr) return Array.isArray(v) ? (v[idx] ?? 0) : 0; return v === undefined && name !== 'undefined' ? (name === 'undefined' ? undefined : (this.warnVar(name), 0)) : v;
+  }
+  warnVar(n) { }
+  setVar(spec, name, idx, arr, val) {
+    const fr = this.frame; let o;
+    if (spec === -7) o = fr.locals; else if (spec === -5) o = this.globals; else { if (spec === -1 && name in BV) { BV[name].set(this, val, idx); return; } const t = this.inst(spec); if (!t) return; o = t; }
+    if (arr) { let a = o[name]; if (!Array.isArray(a)) a = o[name] = []; a[idx] = val; } else o[name] = val;
+  }
+  // ---------- VM ----------
+  exec(ci, self, other, args, ctx) {
+    const W = this.W, c = W.codes[ci]; if (!c) return 0; const ins = W.decode(c);
+    const fr = { self, other, args, locals: Object.create(null), ctx, envs: [] }; const prev = this.frame; this.frame = fr; const st = []; let pc = 0;
+    try {
+      while (pc < ins.length) {
+        const I = ins[pc++]; if (++this.ops > 3e7) { this.ops = 0; throw new Error('runaway code ' + c.name + ' pc=' + pc); }
+        switch (I.op) {
+          case OP.PUSHI: st.push(I.k); break;
+          case OP.PUSH: case OP.PUSHLOC: case OP.PUSHGLB: case OP.PUSHBLTN:
+            if (I.t1 !== 5) { st.push(I.k); break; } {
+              const name = W.varList[I.v].name; let v;
+              if (I.vt === 0) { const idx = num(st.pop()); const sp = st.pop(); v = this.getVar(typeof sp === 'number' ? sp : -1, name, idx, true); }
+              else if (I.vt === 0x80) { const sp = st.pop(); v = this.getVar(sp, name, 0, false); }
+              else v = this.getVar(I.lo, name, 0, false);
+              st.push(v);
+            } break;
+          case OP.POP: {
+            const name = W.varList[I.v].name; let val, spec = I.lo, idx = 0, arr = false;
+            if (I.vt === 0) { if (I.t1 === 2) { val = st.pop(); idx = num(st.pop()); spec = st.pop(); } else { idx = num(st.pop()); spec = st.pop(); val = st.pop(); } arr = true; }  // pop.2.x (compound assignment): [inst, idx, value]; pop.5.x: [value, inst, idx]
+            else if (I.vt === 0x80) { if (I.t1 === 2) { val = st.pop(); spec = st.pop(); } else { spec = st.pop(); val = st.pop(); } }
+            else val = st.pop();
+            this.setVar(spec, name, idx, arr, val);
+          } break;
+          case OP.CONV: { const v = st.pop(); switch (I.t2) { case 4: st.push(typeof v === 'number' ? (v > 0.5 ? 1 : 0) : (v ? 1 : 0)); break; case 2: case 3: st.push(typeof v === 'number' ? Math.trunc(v) : v); break; case 6: st.push(gstr(v)); break; case 0: st.push(typeof v === 'string' ? num(v) : v); break; default: st.push(v); } } break;
+          case OP.ADD: { const b = st.pop(), a = st.pop(); st.push(typeof a === 'string' || typeof b === 'string' ? gstr(a) + gstr(b) : num(a) + num(b)); } break;
+          case OP.SUB: { const b = num(st.pop()), a = num(st.pop()); st.push(a - b); } break;
+          case OP.MUL: { const b = num(st.pop()), a = num(st.pop()); st.push(a * b); } break;
+          case OP.DIV: { const b = num(st.pop()), a = num(st.pop()); st.push(b === 0 ? 0 : a / b); } break;
+          case OP.REM: { const b = num(st.pop()), a = num(st.pop()); st.push(b === 0 ? 0 : Math.trunc(a / b)); } break;
+          case OP.MOD: { const b = num(st.pop()), a = num(st.pop()); st.push(b === 0 ? 0 : a % b); } break;
+          case OP.AND: { const b = num(st.pop()), a = num(st.pop()); st.push(a & b); } break;
+          case OP.OR: { const b = num(st.pop()), a = num(st.pop()); st.push(a | b); } break;
+          case OP.XOR: { const b = num(st.pop()), a = num(st.pop()); st.push(a ^ b); } break;
+          case OP.SHL: { const b = num(st.pop()), a = num(st.pop()); st.push(a << b); } break;
+          case OP.SHR: { const b = num(st.pop()), a = num(st.pop()); st.push(a >> b); } break;
+          case OP.NEG: st.push(-num(st.pop())); break;
+          case OP.NOT: { const a = st.pop(); st.push(I.t1 === 4 ? (truthy(a) ? 0 : 1) : ~num(a)); } break;
+          case OP.CMP: { const b = st.pop(), a = st.pop(); let r;
+            if (typeof a === 'number' && typeof b === 'number') { switch (I.cmp) { case 1: r = a < b; break; case 2: r = a <= b; break; case 3: r = Math.abs(a - b) < EPS; break; case 4: r = Math.abs(a - b) >= EPS; break; case 5: r = a >= b; break; default: r = a > b; } }
+            else { const x = (typeof a === 'string' && typeof b === 'string') ? a : (a === undefined || b === undefined ? (a === b ? 0 : 1) : num(a)), y = (typeof a === 'string' && typeof b === 'string') ? b : (a === undefined || b === undefined ? 0 : num(b));
+              switch (I.cmp) { case 1: r = x < y; break; case 2: r = x <= y; break; case 3: r = x === y; break; case 4: r = x !== y; break; case 5: r = x >= y; break; default: r = x > y; } }
+            st.push(r ? 1 : 0); } break;
+          case OP.DUP: { const k = I.n + 1; const s = st.slice(-k); for (const v of s) st.push(v); } break;
+          case OP.POPZ: st.pop(); break;
+          case OP.B: pc = I.tgt; break;
+          case OP.BT: if (truthy(st.pop())) pc = I.tgt; break;
+          case OP.BF: if (!truthy(st.pop())) pc = I.tgt; break;
+          case OP.RET: return st.pop();
+          case OP.EXIT: return 0;
+          case OP.CALL: {
+            const a = new Array(I.argc); for (let k = 0; k < I.argc; k++) a[k] = st.pop();
+            st.push(this.call(I.f, a, fr)); } break;
+          case OP.PUSHENV: {
+            const spec = st.pop(); let list = spec === -1 ? [fr.self] : spec === -2 ? [fr.other] : spec === -4 ? [] : this.find(spec);
+            if (typeof spec !== 'number') list = [];
+            list = list.filter(i => !i.dead);
+            if (!list.length) { pc = I.tgt; } else { fr.envs.push({ list, k: 0, self: fr.self, other: fr.other }); fr.other = fr.self; fr.self = list[0]; }
+          } break;
+          case OP.POPENV: {
+            const e = fr.envs[fr.envs.length - 1]; if (!e) break;
+            if (I.exit) { fr.envs.pop(); fr.self = e.self; fr.other = e.other; break; }
+            e.k++; while (e.k < e.list.length && e.list[e.k].dead) e.k++;
+            if (e.k < e.list.length) { fr.self = e.list[e.k]; pc = I.tgt; } else { fr.envs.pop(); fr.self = e.self; fr.other = e.other; }
+          } break;
+          default: break;
+        }
+      }
+    } finally { this.frame = prev; }
+    return 0;
+  }
+  textFix(r) { if (typeof r !== 'string') return r; if (!this._ov) { const hit = this.W.strings.find(s => /howdy/i.test(s) && /flowey/i.test(s) && /flower/i.test(s) && s.length < 90); this._ov = { from: hit || null, to: '\\W* Mhmmm^2... welcome to&* the \\YUNDERGROUND\\W!/' }; } return this._ov.from && r === this._ov.from ? this._ov.to : r; }
+  call(fi, a, fr) {
+    const name = this.W.funcList[fi].name; const sc = this.scriptByName.get(name);
+    if (sc !== undefined) { const r = this.exec(sc, fr.self, fr.other, a, fr.ctx); return name === 'scr_gettext' ? this.textFix(r) : r; }
+    const f = this.F[name]; if (f) { const r = f(a); return r === undefined && !(name === 'ds_map_find_value' || name === 'is_undefined') ? 0 : r; }
+    if (!this.missing.has(name)) { this.missing.set(name, 0); console.warn('missing function', name); } this.missing.set(name, this.missing.get(name) + 1); return 0;
+  }
+  start() { this.gameStartPending = true; this.gotoRoom(this.W.roomOrder[0]); }
+  tick() { this.ops = 0; this.step(); this.ops = 0; this.draw(); }
+}
+// built-in global-ish variables
+const BV = {
+  room: { get: g => g.room, set: (g, v) => { g.pendingRoom = v; } },
+  room_width: { get: g => g.roomW, set: (g, v) => { g.roomW = v; } }, room_height: { get: g => g.roomH, set: (g, v) => { g.roomH = v; } },
+  room_persistent: { get: g => g.persistRooms.has(g.room) ? 1 : 0, set: (g, v) => { if (truthy(v)) g.persistRooms.add(g.room); else g.persistRooms.delete(g.room); } },
+  room_speed: { get: g => g.roomSpeed, set: (g, v) => { g.roomSpeed = v; } }, room_first: { get: g => g.W.roomOrder[0], set() { } },
+  os_type: { get: () => 0, set() { } }, current_time: { get: () => performance.now() | 0, set() { } }, working_directory: { get: () => '', set() { } },
+  undefined: { get: () => undefined, set() { } }, view_current: { get: g => g.viewCurrent, set() { } }, application_surface: { get: () => -1, set() { } },
+  background_color: { get: g => g.bgColor, set: (g, v) => { g.bgColor = v; } }, mouse_x: { get: () => 0, set() { } }, mouse_y: { get: () => 0, set() { } }, fps: { get: () => 30, set() { } },
+  current_month: { get: () => new Date().getMonth() + 1, set() { } }, current_day: { get: () => new Date().getDate(), set() { } }, current_hour: { get: () => new Date().getHours(), set() { } }, current_weekday: { get: () => new Date().getDay(), set() { } },
+  keyboard_lastchar: { get: g => g.lastChar, set: (g, v) => { g.lastChar = v; } }, keyboard_lastkey: { get: g => g.lastKey, set: (g, v) => { g.lastKey = v; } }, async_load: { get: () => -1, set() { } },
+  view_enabled: { get: g => g.viewEnabled, set: (g, v) => { g.viewEnabled = v; } },
+  score: { get: g => g.score || 0, set: (g, v) => { g.score = v; } }, health: { get: () => 0, set() { } }, lives: { get: () => 0, set() { } },
+};
+for (const [n, k] of [['view_visible', 'visible'], ['view_xview', 'xview'], ['view_yview', 'yview'], ['view_wview', 'wview'], ['view_hview', 'hview'], ['view_xport', 'xport'], ['view_yport', 'yport'], ['view_wport', 'wport'], ['view_hport', 'hport'], ['view_object', 'obj'], ['view_hborder', 'hborder'], ['view_vborder', 'vborder'], ['view_hspeed', 'hspeed'], ['view_vspeed', 'vspeed']]) BV[n] = { get: (g, i) => g.views[i | 0]?.[k] ?? 0, set: (g, v, i) => { if (g.views[i | 0]) g.views[i | 0][k] = v; } };
+for (const [n, k] of [['background_visible', 'visible'], ['background_foreground', 'fg'], ['background_index', 'index'], ['background_x', 'x'], ['background_y', 'y'], ['background_hspeed', 'hspeed'], ['background_vspeed', 'vspeed'], ['background_htiled', 'htiled'], ['background_vtiled', 'vtiled'], ['background_alpha', 'alpha']]) BV[n] = { get: (g, i) => g.bg[i | 0]?.[k] ?? 0, set: (g, v, i) => { if (g.bg[i | 0]) g.bg[i | 0][k] = v; } };
+
+
+
+return {Game,gstr};
+})();
+const { parseWin } = M_parser, { loadCode } = M_code, { Game } = M_engine;
+const cv = document.getElementById('c'), ctx = cv.getContext('2d'), msg = document.getElementById('msg'), box = document.getElementById('box');
+let G = null, W = null, env = null, running = false, files = new Map();
+const nk = s => String(s).toLowerCase().replace(/\.[a-z0-9]+$/, '').replace(/^\d+[\s._-]*/, '').replace(/[^a-z0-9]/g, ''); let normMap = new Map(); let autoMusic = false;
+function indexFiles() { normMap = new Map(); for (const f of files.values()) { normMap.set(nk(f.name), f); } }
+function musicFound() { return W.sounds.filter(s => s.flags === 100 && (files.get(s.file) || normMap.get(nk(s.file)) || normMap.get(nk(s.name)))).length; }
+const KEEP = new Set([37, 38, 39, 40, 32, 9, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123].filter(k => k !== 116 && k !== 123 && k !== 122));
+const wakeAudio = () => { try { if (env && env.audio && env.audio.state !== 'running') env.audio.resume(); } catch { } };
+addEventListener('pointerdown', wakeAudio); addEventListener('touchstart', wakeAudio);
+// ---- keybinds (rebindable in the Port menu) ----
+const GK = { up: 38, down: 40, left: 37, right: 39, confirm: 90, cancel: 88, menu: 67 };
+const DEF = { ...GK, hide: 72, port: 9 };
+let binds = { ...DEF }; try { Object.assign(binds, JSON.parse(localStorage.getItem('utport:binds') || '{}')); } catch { }
+let capture = null;
+function mapKey(code) { for (const a in GK) if (binds[a] === code) return GK[a]; for (const a in GK) if (DEF[a] === code && binds[a] !== code) return null; return code; }
+addEventListener('keydown', e => {
+  wakeAudio(); if (!G) return;
+  if (capture) { e.preventDefault(); capture(e.keyCode); return; }
+  if (menuOpen) { if (e.keyCode === 27) closeMenu(); return; }
+  if (!e.repeat && !e.ctrlKey && !e.metaKey && !e.altKey) { if (e.keyCode === binds.hide) { e.preventDefault(); toggleUI(); return; } if (e.keyCode === binds.port) { e.preventDefault(); togglePort(); return; } }
+  const kc = mapKey(e.keyCode); if (kc === null) return;
+  if (KEEP.has(kc) || kc === 13 || kc === 27 || e.keyCode === 9) e.preventDefault(); if (!e.repeat) { G.pressed.add(kc); } G.keys.add(kc); G.lastKey = kc; if (e.key.length === 1) G.lastChar = e.key; if (e.keyCode === 115) toggleFs();
+});
+addEventListener('keyup', e => { if (!G) return; const kc = mapKey(e.keyCode); if (kc === null) return; G.keys.delete(kc); G.released.add(kc); });
+addEventListener('blur', () => { if (G) G.keys.clear(); });
+function toggleFs() { document.fullscreenElement ? document.exitFullscreen() : cv.requestFullscreen?.(); }
+function setMsg(t) { msg.textContent = t; }
+class TexStore {
+  constructor(parts, cap) {
+    this.parts = parts; this.cap = cap; this.bm = new Array(parts.length).fill(null); this.pend = new Map(); this.used = new Array(parts.length).fill(0); this.pin = new Set(); this.frame = 0; this.ph = null;
+    this.px = parts.map(b => ((((b[16] << 24) | (b[17] << 16) | (b[18] << 8) | b[19]) >>> 0)) * (((b[20] << 24) | (b[21] << 16) | (b[22] << 8) | b[23]) >>> 0)); const s = this;
+    this.proxy = new Proxy([], { get(t, k) { if (typeof k === 'string' && /^\d+$/.test(k)) return s.get(+k); if (k === 'ready') return i => s.ready(i); if (k === 'length') return s.parts.length; return t[k]; } });
+  }
+  total() { let n = 0; for (let i = 0; i < this.bm.length; i++) if (this.bm[i]) n += this.px[i]; return n; }
+  ready(i) { return !!this.bm[i]; }
+  get(i) { this.used[i] = this.frame; const b = this.bm[i]; if (b) return b; this.load(i); if (!this.ph) { this.ph = document.createElement('canvas'); this.ph.width = this.ph.height = 1; } return this.ph; }
+  load(i) { if (this.bm[i]) return Promise.resolve(); let p = this.pend.get(i); if (p) return p; p = createImageBitmap(new Blob([this.parts[i]], { type: 'image/png' })).then(b => { this.bm[i] = b; this.pend.delete(i); this.evict(i); }).catch(e => { this.pend.delete(i); console.warn('texture decode failed', i, e); }); this.pend.set(i, p); return p; }
+  need(list) { return Promise.all(list.map(i => this.load(i))); }
+  evict(keep) { let tot = this.total(); while (tot > this.cap) { let j = -1, best = 1e18; for (let k = 0; k < this.bm.length; k++) if (this.bm[k] && k !== keep && !this.pin.has(k) && this.used[k] < this.frame - 3 && this.used[k] < best) { best = this.used[k]; j = k; } if (j < 0) break; try { this.bm[j].close(); } catch { } this.bm[j] = null; tot -= this.px[j]; } }
+  async warm() { for (let i = 0; i < this.parts.length; i++) { if (this.bm[i] || this.total() + this.px[i] > this.cap * 0.85) continue; await this.load(i); await new Promise(r => setTimeout(r, 40)); } }
+}
+let coreMode = false;
+const CACHE_NAME = 'utport-v2';
+async function cachedFetch(url) {
+  let cache = null; try { cache = await caches.open(CACHE_NAME); const hit = await cache.match(url); if (hit) return hit; } catch { cache = null; }
+  const resp = await fetch(url); if (!resp.ok) throw new Error(url + ' returned HTTP ' + resp.status);
+  if (cache) { try { cache.put(url, resp.clone()).catch(() => { }); } catch { } }
+  return resp;
+}
+async function loadCore(onp) {
+  const gz = typeof DecompressionStream !== 'undefined', resp = await cachedFetch(gz ? 'game/core.bin.gz' : 'game/core.bin');
+  // Exact sizes of the shipped files. Used when the server sends no (or an unreliable) Content-Length, which is common on mobile networks.
+  const KNOWN = gz ? 14908362 : 28722308; let total = +resp.headers.get('content-length') || 0; if (!total || resp.headers.get('content-encoding')) total = KNOWN; let got = 0;
+  if (!resp.body) { const buf = await resp.arrayBuffer(); if (gz) return await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer(); return buf; }
+  const counter = new TransformStream({ transform(ch, ctl) { got += ch.length; if (onp) onp(Math.min(0.99, got / total)); ctl.enqueue(ch); } });
+  let st = resp.body.pipeThrough(counter); if (gz) st = st.pipeThrough(new DecompressionStream('gzip'));
+  const out = await new Response(st).arrayBuffer(); if (onp) onp(1); return out;
+}
+async function boot(list) {
+  files = new Map(); for (const f of list) files.set(f.name, f); indexFiles();
+  const wf = files.get('data.win') || [...files.values()].find(f => /\.win$/i.test(f.name)); if (!wf) return setMsg('data.win not found. Select the Undertale game folder (the one containing data.win).');
+  autoMusic = await probe('music/mus_story.ogg');
+  setMsg('Reading data.win…'); UTLoader.set(0.62, 'read'); const buf = await wf.arrayBuffer();
+  setMsg('Parsing…'); UTLoader.set(0.68, 'parse', 0.8); await UTLoader.tick(); W = loadCode(parseWin(buf)); UTLoader.set(0.82, 'gfx', 0.9); await UTLoader.tick();
+  const store = new TexStore(W.textures, isTouchDevice() ? 22e6 : 70e6); window.__tex = store; const tex = store.proxy;
+  const base = new Set(); W.fonts.forEach(f => f.tp && base.add(f.tp.t)); for (const n of ['spr_undertaletitle', 'spr_heartsmall']) { const sp = W.sprites.find(s => s.name === n); if (sp) sp.frames.forEach(fr => fr && base.add(fr.t)); } store.pin = base; await store.need([...base]); UTLoader.set(0.93, 'start');
+  const roomPages = r => { const R = W.rooms[r], s = new Set(base); if (R) { for (const i of R.instances) { const o = W.objects[i.obj]; if (o && o.sprite >= 0) for (const f of W.sprites[o.sprite].frames) if (f) s.add(f.t); } for (const t of R.tiles) { const b = W.backgrounds[t.bg]; if (b && b.tp) s.add(b.tp.t); } for (const b of R.backgrounds) { const d = b.bg >= 0 && W.backgrounds[b.bg]; if (d && d.tp) s.add(d.tp.t); } } return [...s]; };
+  let rrWait = 0, rrFor = -1; const roomReady = r => { const need = roomPages(r); if (need.every(t => store.ready(t))) { rrWait = 0; return true; } store.need(need); if (rrFor !== r) { rrFor = r; rrWait = 0; } return ++rrWait > 300; };
+  UTLoader.set(0.96, 'start'); const audio = window.__ac || new (window.AudioContext || window.webkitAudioContext)(); await audio.resume().catch(() => { });
+  const loadSound = async i => { const sd = W.sounds[i]; if (!sd) return null; let ab = null; const f = files.get(sd.file) || files.get(sd.name + '.ogg') || files.get(sd.name + '.wav') || normMap.get(nk(sd.file)) || normMap.get(nk(sd.name));
+    if (f) ab = await f.arrayBuffer(); else if (autoMusic && sd.flags === 100) { try { const r = await cachedFetch('music/' + encodeURIComponent(sd.file)); ab = await r.arrayBuffer(); } catch { } } else if (sd.flags !== 100 && sd.audioId >= 0) { if (W.audio[sd.audioId]) ab = W.audio[sd.audioId].slice().buffer; else if (coreMode) { try { const r = await cachedFetch('game/sfx/' + sd.audioId + '.mp3'); ab = await r.arrayBuffer(); } catch { } } } /* flags 100 = streamed music whose .ogg lives outside data.win; its audioId is a shared placeholder clip (the endless 'wolf' sound), so stay silent instead */ if (!ab) return null;
+    try { return await audio.decodeAudioData(ab); } catch (e) { console.warn('audio decode failed', sd.name); return null; } };
+  env = { ctx, tex, audio, files, loadSound, mkCanvas: (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }, setCaption: t => { document.title = t; }, roomReady, prefetchRoom: r => store.need(roomPages(r)) };
+  G = new Game(W, env); box.style.display = 'none'; cv.style.display = 'block'; shellInit(); running = true; store.warm(); setTimeout(() => { const n = musicFound(); if (autoMusic) utToast('* Music loaded from the music folder.'); else if (!n) utToast('* No music files found. Pick the whole game folder (mus_*.ogg), or use Settings > Load Music.', true); else utToast('* ' + n + ' music tracks found.'); }, 800); last = performance.now(); acc = 0; initUtButtons(); initSettings(); initTouch(); requestAnimationFrame(loop);
+}
+
+// ---------- Load File / Save File (top right, Undertale style) ----------
+const UT_PREFIX = 'ut:';
+let utReady = false;
+function utPaint(c2, fn) { const o = { ctx: G.ctx, font: G.font, h: G.halign, v: G.valign }; G.ctx = c2; c2.imageSmoothingEnabled = false; try { fn(); } finally { G.ctx = o.ctx; G.font = o.font; G.halign = o.h; G.valign = o.v; } }
+const utFont = () => Math.max(0, W.fonts.findIndex(f => f.name === 'fnt_maintext'));
+const utHeart = () => W.sprites.findIndex(s => s.name === 'spr_heartsmall');
+const YELLOW = 0x00ffff, WHITE = 0xffffff;
+const GEAR = ['....111....', '.11.111.11.', '.111111111.', '..11...11..', '111.....111', '111.....111', '111.....111', '..11...11..', '.111111111.', '.11.111.11.', '....111....'];
+function utTextW(t, k) { return Math.ceil(G.textWidth(t, W.fonts[utFont()]) * k); }
+function paintButton(cvs, label, hot) {
+  const k = 1, tw = utTextW(label, k), padX = 8, heartW = 14, b = 2, th = 16 * k, padY = 3;
+  const w = b + padX + heartW + tw + padX + b, h = b + padY + th + padY + b;
+  if (cvs.width !== w || cvs.height !== h) { cvs.width = w; cvs.height = h; }
+  const c2 = cvs.getContext('2d'); c2.imageSmoothingEnabled = false; c2.clearRect(0, 0, w, h);
+  c2.fillStyle = '#fff'; c2.fillRect(0, 0, w, h); c2.fillStyle = '#000'; c2.fillRect(b, b, w - 2 * b, h - 2 * b);
+  utPaint(c2, () => {
+    G.font = utFont(); G.halign = 0; G.valign = 0;
+    if (label === 'Settings') { c2.fillStyle = hot ? '#ff0' : '#fff'; GEAR.forEach((row, ry) => [...row].forEach((ch, rx) => { if (ch === '1') c2.fillRect(b + padX + rx, b + padY + 2 + ry, 1, 1); })); }
+    G.drawText(b + padX + heartW, b + padY, label, k, k, 0, hot ? YELLOW : WHITE, 1);
+    if (hot) { const hs = utHeart(); if (hs >= 0) G.drawSprite(hs, 0, b + padX + 1, b + padY + 4, 1, 1); }
+  });
+}
+function utScale() { return innerWidth < 640 ? 1 : 1.25; }
+function utFit(cvs) { cvs.style.width = Math.round(cvs.width * utScale()) + 'px'; cvs.style.height = Math.round(cvs.height * utScale()) + 'px'; }
+function utToast(text, bad) {
+  const holder = document.getElementById('uttoast'); holder.textContent = '';
+  const cvs = document.createElement('canvas'); cvs.className = 'utt'; const k = 1, tw = utTextW(text, k), b = 3, pad = 8, h = b * 2 + pad * 2 + 16 * k, w = b * 2 + pad * 2 + tw;
+  cvs.width = w; cvs.height = h; const c2 = cvs.getContext('2d'); c2.fillStyle = '#fff'; c2.fillRect(0, 0, w, h); c2.fillStyle = '#000'; c2.fillRect(b, b, w - 2 * b, h - 2 * b);
+  utPaint(c2, () => { G.font = utFont(); G.halign = 0; G.valign = 0; G.drawText(b + pad, b + pad, text, k, k, 0, bad ? 0x0000ff : WHITE, 1); });
+  cvs.style.width = Math.round(w * utScale() * 1.2) + 'px'; cvs.style.height = Math.round(h * utScale() * 1.2) + 'px'; holder.appendChild(cvs);
+  clearTimeout(utToast.t1); clearTimeout(utToast.t2); utToast.t1 = setTimeout(() => cvs.classList.add('out'), 3200); utToast.t2 = setTimeout(() => { if (cvs.parentNode) cvs.remove(); }, 3900);
+}
+function utKeys() { const out = []; try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith(UT_PREFIX)) out.push(k); } } catch { } return out; }
+function utSave() {
+  const keys = utKeys(); if (!keys.length) return utToast('* Nothing to save yet. Use a SAVE point first.', true);
+  const data = {}; for (const k of keys) data[k] = localStorage.getItem(k);
+  const blob = new Blob([JSON.stringify({ 'undertale-html5-save': 1, saved: new Date().toISOString(), data }, null, 1)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'undertale-save.json'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  utToast('* Save file downloaded.');
+}
+// real Undertale files (undertale.ini, file0, file9, system_information_962/963) are accepted too
+const RAW = { 'undertale.ini': n => UT_PREFIX + 'ini:' + n };
+async function utLoad(fileList) {
+  const files = [...fileList]; if (!files.length) return; let bundle = null, raw = [], bad = 0;
+  for (const f of files) {
+    if (f.size > 5e6) { bad++; continue; } const text = await f.text();
+    if (/\.json$/i.test(f.name) || text.trimStart().startsWith('{')) { try { const j = JSON.parse(text); if (j && j.data && typeof j.data === 'object') { bundle = j.data; continue; } } catch { } bad++; }
+    else if (f.name === 'undertale.ini' || /^file\d+$/.test(f.name) || /^system_information_\d+$/.test(f.name)) raw.push([f.name, text]); else bad++;
+  }
+  let n = 0;
+  try {
+    if (bundle) { for (const k of utKeys()) localStorage.removeItem(k); for (const [k, v] of Object.entries(bundle)) if (k.startsWith(UT_PREFIX) && typeof v === 'string') { localStorage.setItem(k, v); n++; } }
+    for (const [name, text] of raw) { localStorage.setItem(name === 'undertale.ini' ? UT_PREFIX + 'ini:undertale.ini' : UT_PREFIX + 'f:' + name, text.replace(/\r/g, '')); n++; }
+  } catch { return utToast('* Could not write the save data.', true); }
+  if (!n) return utToast("* That isn't a save file.", true);
+  utToast('* Save file loaded.'); if (G) G.restart = true; // restart so the title screen sees the loaded file
+}
+function initUtButtons() {
+  if (utReady) { document.getElementById('utbar').style.display = 'flex'; return; } utReady = true;
+  const bar = document.getElementById('utbar'), pick = document.getElementById('utpick');
+  for (const [id, label, fn] of [['utload', 'Load File', () => pick.click()], ['utsave', 'Save File', utSave]]) {
+    const btn = document.getElementById(id), cvs = document.createElement('canvas'); btn.appendChild(cvs);
+    const draw = hot => { paintButton(cvs, label, hot); utFit(cvs); };
+    draw(false);
+    btn.addEventListener('pointerenter', () => draw(true)); btn.addEventListener('pointerleave', () => draw(false));
+    btn.addEventListener('mousedown', e => e.preventDefault()); // keep keyboard focus off the button so Enter/Z still belong to the game
+    btn.addEventListener('click', () => { fn(); btn.blur(); });
+    addEventListener('resize', () => utFit(cvs));
+  }
+  pick.onchange = async () => { await utLoad(pick.files); pick.value = ''; };
+  bar.style.display = 'flex';
+}
+
+// ---------- Settings / Cheats (top left) ----------
+let menuOpen = false; const cheat = { god: false };
+const BATTLES = [['Toriel', 22, 0], ['Papyrus', 27, 0], ['Undyne', 47, 0], ['Undyne the Undying', 92, 0], ['Mettaton', 80, 0], ['Mettaton EX', 81, 0], ['Mettaton NEO', 94, 0], ['Sans', 95, 1], ['Asgore', 100, 0], ['Napstablook', 20, 0], ['Dummy', 2, 0]];
+const WARPS = [['Golden Flowers', 5], ['Ruins Start', 6], ["Toriel's Home", 32], ['Snowdin Forest', 44], ['Snowdin Town', 68], ['Waterfall', 106], ["Undyne's House", 118], ['Hotland', 137], ["Alphys's Lab", 141], ['MTT Resort Lobby', 183], ['The CORE', 189], ['New Home', 219], ["Asgore's Room", 223], ['Last Corridor', 230], ['Sans Corridor', 231], ['Throne Room', 235], ['The Barrier', 237], ['True Lab', 245], ['Photoshop Flowey', 294], ['Credits', 278]];
+function inGame() { if (!G || G.room < 4) { utToast('* Start the game first.', true); return false; } return true; }
+function closeMenu() { menuOpen = false; const m = document.getElementById('utmenu'); m.style.display = 'none'; m.textContent = ''; }
+function warpTo(r) { if (!inGame()) return; const g = G.globals; closeMenu(); g.interact = 0; g.inbattle = 0; if (!(g.hp > 0)) g.hp = g.maxhp || 20; G.F.audio_stop_all(); G.pendingRoom = r; }
+function fightBoss(n, m) { if (!inGame()) return; const g = G.globals; closeMenu(); g.battlegroup = n; g.mercy = m; g.interact = 0; if (!(g.hp > 0)) g.hp = g.maxhp || 20; G.create(143, 0, 0); }
+function openPage(name) {
+  const m = document.getElementById('utmenu'); m.textContent = ''; m.style.display = 'flex'; menuOpen = true;
+  const add = (label, fn) => { const b = document.createElement('button'), cv = document.createElement('canvas'); b.appendChild(cv);
+    const d = hot => { paintButton(cv, label, hot); utFit(cv); }; d(false);
+    b.addEventListener('pointerenter', () => d(true)); b.addEventListener('pointerleave', () => d(false)); b.addEventListener('click', fn); m.appendChild(b); };
+  const g = G.globals;
+  if (name === 'main') { add('Boss Battles', () => openPage('battles')); add('Warp to Room', () => openPage('warp')); add('Cheats', () => openPage('cheats')); add('Load Music Files', () => document.getElementById('musicpick').click()); add('Port Menu', () => { closeMenu(); togglePort(); }); add('Close', closeMenu); }
+  else if (name === 'battles') { for (const [l, n, mc] of BATTLES) add(l, () => fightBoss(n, mc)); add('Back', () => openPage('main')); }
+  else if (name === 'warp') { for (const [l, r] of WARPS) add(l, () => warpTo(r)); add('Back', () => openPage('main')); }
+  else { add('God Mode: ' + (cheat.god ? 'ON' : 'OFF'), () => { cheat.god = !cheat.god; openPage('cheats'); });
+    add('Full Heal', () => { g.hp = g.maxhp || g.hp; utToast('* HP restored.'); });
+    add('LV 20 (92 HP)', () => { g.lv = 20; g.maxhp = 92; g.hp = 92; utToast('* You feel stronger.'); });
+    add('+999 Gold', () => { g.gold = (g.gold || 0) + 999; utToast('* Gold added.'); });
+    add('Unfreeze Player', () => { g.interact = 0; utToast('* Player unfrozen.'); });
+    add('Back', () => openPage('main')); }
+}
+function initSettings() {
+  const box = document.getElementById('utset'), btn = document.getElementById('utsetbtn'); if (btn.firstChild) { box.style.display = 'block'; return; }
+  const cv = document.createElement('canvas'); btn.appendChild(cv); const d = hot => { paintButton(cv, 'Settings', hot); utFit(cv); }; d(false);
+  btn.addEventListener('pointerenter', () => d(true)); btn.addEventListener('pointerleave', () => d(false)); btn.addEventListener('mousedown', e => e.preventDefault());
+  btn.addEventListener('click', () => { if (menuOpen) closeMenu(); else if (G) openPage('main'); btn.blur(); });
+  box.style.display = 'block';
+}
+let last = 0, acc = 0;
+function loop(t) {
+  if (!running) return; if (window.__tex) window.__tex.frame++; if (SH.open) { try { shellFrame(); } catch (e) { console.error(e); } last = t; acc = 0; requestAnimationFrame(loop); return; } if (menuOpen) { last = t; acc = 0; requestAnimationFrame(loop); return; } acc += Math.min(250, t - last); last = t; const dt = 1000 / (G.roomSpeed || 30); let n = 0;
+  try {
+    while (acc >= dt && n < 4) { G.ops = 0; G.step(); acc -= dt; n++; }
+    if (cheat.god && G.globals.maxhp > 0) G.globals.hp = G.globals.maxhp;
+    if (n) { G.ops = 0; G.draw(); }
+    if (G.restart) { G.restart = false; G.F.audio_stop_all(); const gl = G.gameLang; G = new Game(W, env); G.gameLang = gl; G.start(); }
+    if (G.ended) { running = false; cv.style.display = 'none'; box.style.display = 'block'; setMsg('Game ended. Reload to play again.'); return; }
+  } catch (e) { console.error(e); acc = 0; }
+  requestAnimationFrame(loop);
+}
+document.getElementById('musicpick').onchange = e => { for (const f of e.target.files) { files.set(f.name, f); try { IDB.put(f.name, f); } catch { } } indexFiles(); if (G) { G.bufs.clear(); utToast('* ' + musicFound() + ' music tracks found.'); } e.target.value = ''; closeMenu(); };
+// ---------- storage: files the player picks once are kept in IndexedDB ----------
+const IDB = {
+  db: null,
+  open() { return new Promise((res, rej) => { if (this.db) return res(); try { const r = indexedDB.open('utport', 1); r.onupgradeneeded = () => r.result.createObjectStore('f'); r.onsuccess = () => { this.db = r.result; res(); }; r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); },
+  st(m) { return this.db.transaction('f', m).objectStore('f'); },
+  req(r) { return new Promise((res, rej) => { r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); },
+  get(k) { return this.req(this.st('readonly').get(k)); }, put(k, v) { return this.req(this.st('readwrite').put(v, k)); },
+  keys() { return this.req(this.st('readonly').getAllKeys()); }, clear() { return this.req(this.st('readwrite').clear()); },
+};
+let SRC = null;
+async function probe(url) { try { let r = await fetch(url, { method: 'HEAD', cache: 'no-store' }); if (r.ok) return true; r = await fetch(url, { headers: { Range: 'bytes=0-0' }, cache: 'no-store' }); return r.ok || r.status === 206; } catch { return false; } }
+function setupMsg(t) { setMsg(t); }
+async function ingest(list) {
+  const arr = [...list].filter(f => /^data\.win$/i.test(f.name) || /\.(ogg|mp3|wav)$/i.test(f.name));
+  if (!arr.some(f => /^data\.win$/i.test(f.name))) return setupMsg('data.win was not among the chosen files. Pick the game folder (or data.win plus the music files).');
+  try { await IDB.open(); } catch { return setupMsg('This browser blocks local storage for the page (private mode?). Try a normal window.'); }
+  let n = 0; for (const f of arr) { try { await IDB.put(f.name.toLowerCase() === 'data.win' ? 'data.win' : f.name, f); } catch (e) { return setupMsg('Could not store ' + f.name + ' (' + (e && e.name || 'error') + '). Not enough storage?'); } setupMsg('Saving files... ' + (++n) + '/' + arr.length); }
+  setupMsg('Saved. Starting...'); await startup();
+}
+async function startup() {
+  document.getElementById('setup').style.display = 'none'; document.getElementById('play').style.display = 'none';
+  try { await IDB.open(); } catch { }
+  SRC = null; if (await probe('game/core.bin.gz') || await probe('game/core.bin')) SRC = 'local'; else if (await probe('data.win')) SRC = 'legacy';
+  if (!SRC) { try { if (IDB.db && await IDB.get('data.win')) SRC = 'cache'; } catch { } }
+  if (!SRC) { document.getElementById('box').style.display = 'block'; document.getElementById('setup').style.display = 'block'; setMsg(''); return; }
+  const pb = document.getElementById('play'); pb.onclick = () => launch(SRC); setMsg(SRC === 'local' ? 'Game files found. Loading...' : 'Using the game files saved in this browser. Loading...'); launch(SRC);
+}
+async function launch(src) {
+  const pb = document.getElementById('play'); pb.disabled = true; UTLoader.show(); UTLoader.set(0.01, 'dl', 0.56); window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
+  try {
+    let list = [];
+    if (src === 'local') { coreMode = true; const ab = await loadCore(p => { document.title = 'Undertale Port ' + Math.round(p * 100) + '%'; UTLoader.dl(p); }); document.title = 'Undertale Port'; list = [{ name: 'data.win', arrayBuffer: async () => ab }]; }
+    else if (src === 'legacy') { const resp = await fetch('data.win'); if (!resp.ok) throw new Error('data.win returned HTTP ' + resp.status); const total = +resp.headers.get('content-length') || 0; let blob; if (resp.body && total) { const rd = resp.body.getReader(), parts = []; let got = 0; for (; ;) { const r = await rd.read(); if (r.done) break; parts.push(r.value); got += r.value.length; UTLoader.dl(got / total); } blob = new Blob(parts); } else blob = await resp.blob(); list = [new File([blob], 'data.win')]; }
+    else { const keys = await IDB.keys(); list = keys.map(k => ({ name: String(k), arrayBuffer: async () => (await IDB.get(k)).arrayBuffer() })); }
+    pb.style.display = 'none'; await boot(list);
+    if (running) UTLoader.done(); else { UTLoader.hide(); document.getElementById('box').style.display = 'block'; }
+  } catch (e) { console.error(e); UTLoader.hide(); document.getElementById('box').style.display = 'block'; setMsg('Could not load the game files: ' + (e && e.message)); pb.style.display = 'inline-block'; pb.disabled = false; }
+}
+document.getElementById('dir').onchange = e => ingest(e.target.files);
+document.getElementById('win').onchange = e => ingest(e.target.files);
+startup();
+
+// =====================================================================
+//  PORT SHELL: language select, welcome screen, keybinds, hide-buttons
+// =====================================================================
+const SH = { open: false, screen: 'lang', cur: 0, started: false, music: null, t: 0, cap: null };
+const store = { get: (k, d) => { try { const v = localStorage.getItem('utport:' + k); return v === null ? d : v; } catch { return d; } }, set: (k, v) => { try { localStorage.setItem('utport:' + k, v); } catch { } } };
+let uiLang = store.get('ui', ''), gameLang = store.get('glang', 'en'), uiHidden = false;
+const UI = {
+  en: { sel: 'Select Language', lEn: 'English', lJa: 'Japanese', lEs: 'Espanol (menus only)', note: 'Game dialogue is English or Japanese. Spanish applies to this port\'s menus only.',
+    welcome: 'Welcome to Undertale Port Fan-Project', i1: 'An unofficial, fan-made HTML5 port.', i2: 'Everything runs right here in your browser.', i3: 'Not affiliated with or endorsed by Toby Fox or the original developers.',
+    start: 'Start Game', resume: 'Resume', lang: 'Language', controls: 'Controls', btns: 'On-screen buttons', on: 'ON', off: 'OFF', clear: 'Clear saved game files', back: 'Back', reset: 'Reset to defaults', press: 'Press a key...', ctitle: 'Controls', inext: 'Z / Enter / tap: next     X: skip', intro: [['happy', "Well, hello! I'm Pip. Stick around and I'll show you how things work here."], ['happy', 'Welcome to the Undertale Port Fan-Project: the whole game, running right inside your browser. No installs, no emulator, no fuss.'], ['wink', 'A tiny engine reads the game data and plays it back frame by frame. Pretty neat, right?'], ['happy', 'Got a phone? Perfect. There are buttons on the screen, and you can hide them whenever you like. Every key can be remapped, too.'], ['plain', 'Need to come back here? Press {k} any time. The game will wait for you, I promise.'], ['sheepish', "Fair warning: it's a fan project, so a bug or two might sneak in. Go easy on it!"], ['happy', "That's the tour! Tweak your controls if you want, then hit Start. Have fun out there!"]],
+    chelp: 'Select an action, then press the new key. Esc cancels.', foot: 'Z/Enter: select   X: back   {k}: return to this menu', restart: '(restart to apply)', cleared: 'Saved files cleared. Reload the page.',
+    a_up: 'Up', a_down: 'Down', a_left: 'Left', a_right: 'Right', a_confirm: 'Confirm', a_cancel: 'Cancel', a_menu: 'Menu', a_hide: 'Hide buttons', a_port: 'This menu', hintK: 'Press [{k}] to hide buttons', hintT: 'Tap here to hide buttons' },
+  es: { sel: 'Selecciona el idioma', lEn: 'English', lJa: 'Japanese', lEs: 'Español (solo menús)', note: 'El diálogo del juego es inglés o japonés. El español solo aplica a los menús de este port.',
+    welcome: 'Bienvenido a Undertale Port Fan-Project', i1: 'Un port HTML5 no oficial hecho por fans.', i2: 'Todo funciona aquí mismo, dentro de tu navegador.', i3: 'Sin relación ni respaldo de Toby Fox ni de los desarrolladores originales.',
+    start: 'Empezar juego', resume: 'Continuar', lang: 'Idioma', controls: 'Controles', btns: 'Botones en pantalla', on: 'SÍ', off: 'NO', clear: 'Borrar archivos guardados', back: 'Volver', reset: 'Restablecer', press: 'Pulsa una tecla...', ctitle: 'Controles', inext: 'Z / Enter / toque: siguiente     X: omitir', intro: [['happy', '¡Hola! Soy Pip. Quédate un momento y te enseño cómo funciona todo esto.'], ['happy', 'Bienvenido al Undertale Port Fan-Project: el juego completo, funcionando dentro de tu navegador. Sin instalar nada, sin emulador, sin complicaciones.'], ['wink', 'Un motor diminuto lee los datos del juego y los reproduce cuadro a cuadro. Genial, ¿verdad?'], ['happy', '¿Tienes un móvil? Perfecto. Hay botones en pantalla y puedes ocultarlos cuando quieras. Todas las teclas se pueden cambiar.'], ['plain', '¿Quieres volver aquí? Pulsa {k} en cualquier momento. El juego te esperará, lo prometo.'], ['sheepish', 'Aviso: es un proyecto de fans, así que puede colarse algún error. ¡Sé amable con él!'], ['happy', '¡Eso es todo! Ajusta los controles si quieres y pulsa Empezar. ¡A divertirse!']],
+    chelp: 'Elige una acción y pulsa la nueva tecla. Esc cancela.', foot: 'Z/Enter: elegir   X: volver   {k}: volver a este menú', restart: '(reinicia para aplicar)', cleared: 'Archivos borrados. Recarga la página.',
+    a_up: 'Arriba', a_down: 'Abajo', a_left: 'Izquierda', a_right: 'Derecha', a_confirm: 'Confirmar', a_cancel: 'Cancelar', a_menu: 'Menú', a_hide: 'Ocultar botones', a_port: 'Este menú', hintK: 'Pulsa [{k}] para ocultar botones', hintT: 'Toca aquí para ocultar botones' },
+};
+const tr = k => (UI[uiLang] || UI.en)[k] ?? UI.en[k] ?? k;
+function keyName(c) { const m = { 8: 'Backspace', 9: 'Tab', 13: 'Enter', 16: 'Shift', 17: 'Ctrl', 18: 'Alt', 27: 'Esc', 32: 'Space', 37: 'Left', 38: 'Up', 39: 'Right', 40: 'Down' }; if (m[c]) return m[c]; if (c >= 48 && c <= 90) return String.fromCharCode(c); if (c >= 112 && c <= 123) return 'F' + (c - 111); return 'Key ' + c; }
+function updateHint() { const el = document.getElementById('uthinttxt'); if (!el) return; el.textContent = isTouchDevice() ? tr('hintT') : tr('hintK').replace('{k}', keyName(binds.hide)); }
+function toggleUI() { uiHidden = !uiHidden; document.body.classList.toggle('uihidden', uiHidden); }
+document.getElementById('uthint').addEventListener('click', e => { e.preventDefault(); toggleUI(); });
+document.getElementById('uthint').addEventListener('mousedown', e => e.preventDefault());
+const PIP = ['..bb........bb..', '.bpbb......bbpb.', '.bbbbbbbbbbbbbb.', 'bhhbbbbbbbbbbbbb', 'bhbbbbbbbbbbbbbb', 'bbbbbbbbbbbbbbbb', 'bbbbbbbbbbbbbbbb', 'bbbbbbbbbbbbbbbb', 'bbbbbbbbbbbbbbbb', 'bbbbbbbbbbbbbbbb', '.bbbbbbbbbbbbbb.', '..bbbbbbbbbbbb..', '...bbbbbbbbbb...', '..ww........ww..', '..ww........ww..'];
+const PAL = { b: '#6fd0ff', h: '#d8f4ff', p: '#ff8fb0', w: '#ffffff' };
+function drawCart(x, y, sc, mood = 'happy', talking = false) {
+  const t = SH.t, bob = Math.sin(t / 12), dy = Math.round(bob * 3), blink = (t % 160) > 153;
+  for (let r = 0; r < PIP.length; r++) for (let q = 0; q < 16; q++) { const ch = PIP[r][q] || '.'; if (ch === '.') continue; ctx.fillStyle = PAL[ch]; ctx.fillRect(x + q * sc, y + dy + r * sc, sc, sc); }
+  const R = (c, r, w, h2, col = '#101828') => { ctx.fillStyle = col; ctx.fillRect(x + c * sc, y + dy + r * sc, w * sc, h2 * sc); };
+  const eye = (c, closed) => { if (closed) { R(c, 7, 2, 1); return; } R(c, 6, 2, 3); R(c, 6, 1, 1, '#fff'); };
+  eye(4, blink); if (mood === 'wink') R(10, 7, 2, 1); else eye(10, blink);
+  R(3, 9, 2, 1, '#ff8fb0'); R(11, 9, 2, 1, '#ff8fb0');
+  if (talking && (Math.floor(t / 4) % 2)) R(7, 10, 2, 2);
+  else if (mood === 'plain') R(7, 11, 2, 1);
+  else if (mood === 'sheepish') { R(6, 11, 1, 1); R(7, 10, 1, 1); R(8, 11, 1, 1); R(9, 10, 1, 1); }
+  else { R(6, 10, 1, 1); R(7, 11, 2, 1); R(9, 10, 1, 1); }
+}
+function wrapText(txt, maxw, sc) { const f = W.fonts[fi('fnt_maintext')], out = []; let cur = ''; for (const w of txt.split(' ')) { const t = cur ? cur + ' ' + w : w; if (G.textWidth(t, f) * sc > maxw && cur) { out.push(cur); cur = w; } else cur = t; } out.push(cur); return out; }
+function blip() { const i = W.sounds.findIndex(s => s.name === 'SND_TXT2'); if (i < 0) return; try { const id = G.F.audio_play_sound([i, 40, 0]); G.F.audio_sound_gain([id, 0.3, 0]); } catch { } }
+function introFrame() {
+  const P = G.pressed, pr = (...ks) => ks.some(k => P.has(k)); const L = tr('intro'), [mood, raw] = L[SH.li]; const f = W.fonts[fi('fnt_maintext')];
+  const txt = fold(raw.replace('{k}', keyName(binds.port)), f); const prev = SH.ch | 0; SH.ch = Math.min(txt.length, SH.ch + 1); const talking = SH.ch < txt.length;
+  if (talking && (SH.ch | 0) !== prev && (SH.ch | 0) % 3 === 0) blip();
+  if (pr(90, 13)) { if (talking) SH.ch = txt.length; else if (SH.li < L.length - 1) { SH.li++; SH.ch = 0; } else { SH.introDone = true; go('main'); } }
+  else if (pr(88, 16)) { SH.introDone = true; go('main'); }
+  P.clear(); G.released.clear(); SH.t++;
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.imageSmoothingEnabled = false; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 640, 480);
+  drawCart(256, 56, 8, mood, talking);
+  ctx.fillStyle = '#fff'; ctx.fillRect(28, 284, 584, 164); ctx.fillStyle = '#000'; ctx.fillRect(34, 290, 572, 152);
+  T('Pip', 40, 254, { c: 0x00ffff, s: 1.5 });
+  let left = Math.floor(SH.ch); wrapText(txt, 520, 1.7).forEach((ln, i) => { T(ln.slice(0, Math.max(0, left)), 56, 304 + i * 30, { s: 1.7 }); left -= ln.length + 1; });
+  T(tr('inext'), 320, 456, { a: 1, c: 0x888888 });
+}
+const fi = n => Math.max(0, W.fonts.findIndex(f => f.name === n));
+function fold(s, f) { return [...s].map(ch => f.glyphs.has(ch.charCodeAt(0)) ? ch : ch.normalize('NFD').replace(/[\u0300-\u036f]/g, '')).join(''); }
+function T(s, x, y, o = {}) { const fidx = o.big ? fi('fnt_main') : fi('fnt_maintext'); G.font = fidx; G.halign = o.a || 0; G.valign = 0; G.drawText(x, y, fold(String(s), W.fonts[fidx]), o.s || 1, o.s || 1, 0, o.c ?? 0xffffff, 1, o.sep ?? -1, o.w ?? -1); G.halign = 0; }
+function langIndex() { return uiLang === 'es' ? 2 : (gameLang === 'ja' ? 1 : 0); }
+function setLang(ui, gl) { uiLang = ui; gameLang = gl; store.set('ui', ui); store.set('glang', gl); if (G) G.gameLang = gl; updateHint(); }
+function shellRows() {
+  const s = SH.screen;
+  if (s === 'lang') return [{ label: UI.en.lEn, act: () => { setLang('en', 'en'); go(SH.introDone ? 'main' : 'intro'); } }, { label: 'Japanese', act: () => { setLang('en', 'ja'); go(SH.introDone ? 'main' : 'intro'); } }, { label: UI.es.lEs, act: () => { setLang('es', 'en'); go(SH.introDone ? 'main' : 'intro'); } }];
+  if (s === 'controls') { const r = [['up', 'down', 'left', 'right', 'confirm', 'cancel', 'menu', 'hide', 'port'].map(a => ({ label: tr('a_' + a), val: SH.cap === a ? tr('press') : keyName(binds[a]), act: () => beginCapture(a) }))][0]; r.push({ label: tr('reset'), act: () => { binds = { ...DEF }; store.set('binds', JSON.stringify(binds)); updateHint(); } }); r.push({ label: tr('back'), act: () => go('main') }); return r; }
+  const r = []; if (SH.started) r.push({ label: tr('resume'), act: resumeGame }); else r.push({ label: tr('start'), act: startGame });
+  r.push({ label: tr('lang'), val: ['English', 'Japanese', 'Español'][langIndex()] + (SH.started ? ' ' + tr('restart') : ''), cycle: true, act: d => { const i = (langIndex() + (d || 1) + 3) % 3; i === 0 ? setLang('en', 'en') : i === 1 ? setLang('en', 'ja') : setLang('es', 'en'); } });
+  r.push({ label: tr('controls'), act: () => go('controls') });
+  r.push({ label: tr('btns'), val: uiHidden ? tr('off') : tr('on'), cycle: true, act: () => toggleUI() });
+  if (SRC === 'cache') r.push({ label: tr('clear'), act: async () => { try { await IDB.clear(); } catch { } setMsg(tr('cleared')); SH.note = tr('cleared'); } });
+  return r;
+}
+function go(s) { SH.screen = s; SH.cur = 0; SH.cap = null; capture = null; if (s === 'intro') { SH.li = 0; SH.ch = 0; } }
+function beginCapture(a) { SH.cap = a; capture = code => { if (code === 27) { SH.cap = null; capture = null; return; } const old = binds[a]; for (const b in binds) if (b !== a && binds[b] === code) binds[b] = old; binds[a] = code; store.set('binds', JSON.stringify(binds)); SH.cap = null; capture = null; updateHint(); }; }
+function shellInit() {
+  G.gameLang = gameLang; for (const id of ['uthint']) document.getElementById(id).style.display = 'flex'; updateHint();
+  SH.open = true; SH.screen = uiLang ? 'intro' : 'lang'; SH.li = 0; SH.ch = 0; SH.cur = 0; shellMusic(true);
+  cv.addEventListener('pointerdown', e => { if (!SH.open) return; const r = cv.getBoundingClientRect(), x = (e.clientX - r.left) * 640 / r.width, y = (e.clientY - r.top) * 480 / r.height; shellTap(x, y); });
+}
+function shellMusic(on) {
+  if (!on) { if (SH.music !== null) { try { G.F.audio_stop_sound([SH.music]); } catch { } SH.music = null; } return; }
+  if (SH.music !== null) return; const i = W.sounds.findIndex(s => s.name === 'mus_toriel'); if (i < 0) return;
+  SH.music = G.F.audio_play_sound([i, 100, 1]); try { G.F.audio_sound_gain([SH.music, 0.55, 0]); } catch { }
+}
+async function startGame() { if (SH.starting) return; SH.starting = true; try { await G.env.prefetchRoom(G.W.roomOrder[0]); } catch { } SH.starting = false; SH.open = false; shellMusic(false); SH.started = true; G.gameLang = gameLang; G.keys.clear(); G.pressed.clear(); G.released.clear(); G.start(); }
+function resumeGame() { SH.open = false; shellMusic(false); try { G.F.audio_resume_all(); } catch { } G.keys.clear(); G.pressed.clear(); G.released.clear(); capture = null; }
+function togglePort() { if (!G || !running) return; if (SH.open) { if (SH.started) resumeGame(); return; } if (!SH.started) return; try { G.F.audio_pause_all(); } catch { } G.keys.clear(); G.pressed.clear(); SH.open = true; SH.screen = 'main'; SH.cur = 0; shellMusic(true); }
+function rowGeom() { const s = SH.screen; return s === 'lang' ? { y0: 190, step: 46, sc: 1.8 } : s === 'controls' ? { y0: 92, step: 29, sc: 1.2 } : { y0: 276, step: 36, sc: 1.6 }; }
+function shellTap(x, y) { if (SH.screen === 'intro') { G.pressed.add(90); return; } if (SH.cap) return; const rows = shellRows(), g = rowGeom(); for (let i = 0; i < rows.length; i++) { const top = g.y0 - 6 + i * g.step; if (y >= top && y < top + g.step - 2 && x > 90 && x < 560) { SH.cur = i; rows[i].act(1); return; } } }
+function shellFrame() {
+  if (SH.screen === 'intro') return introFrame();
+  SH.t++; const P = G.pressed, pr = (...ks) => ks.some(k => P.has(k)); const rows = shellRows(), n = rows.length;
+  if (!SH.cap) {
+    if (pr(38)) SH.cur = (SH.cur + n - 1) % n; if (pr(40)) SH.cur = (SH.cur + 1) % n; SH.cur = Math.min(SH.cur, n - 1);
+    if (pr(90, 13)) rows[SH.cur].act(1); else if (pr(39) && rows[SH.cur].cycle) rows[SH.cur].act(1); else if (pr(37) && rows[SH.cur].cycle) rows[SH.cur].act(-1);
+    else if (pr(88, 16)) { if (SH.screen === 'controls') go('main'); else if (SH.screen === 'main' && SH.started) resumeGame(); }
+  }
+  P.clear(); G.released.clear();
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.imageSmoothingEnabled = false; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 640, 480);
+  const logo = W.sprites.findIndex(s => s.name === 'spr_undertaletitle'), heart = W.sprites.findIndex(s => s.name === 'spr_heartsmall'), g = rowGeom();
+  if (logo >= 0 && SH.screen !== 'controls') { G.drawSprite(logo, 0, 20, 24, 1.6, 1.6, 0, 0xffffff, 1, [0, 100, 296, 45]); T('PORT', 508, 40, { big: true, s: 1.25 }); }
+  if (SH.screen === 'lang') { T(tr('sel'), 320, 130, { big: true, s: 1, a: 1 }); T(tr('note'), 320, 400, { a: 1, s: 1, w: 560, c: 0xaaaaaa }); }
+  else if (SH.screen === 'controls') { T(tr('ctitle'), 320, 30, { big: true, s: 1.1, a: 1 }); T(tr('chelp'), 320, 446, { a: 1, s: 1, c: 0xaaaaaa }); }
+  else { drawCart(34, 128, 5, 'happy', false); T(tr('welcome'), 140, 126, { s: 1.35, w: 480 }); T(tr('i1'), 140, 158, { w: 480, c: 0xcccccc, sep: 17 }); T(tr('i2'), 140, 176, { w: 480, c: 0xcccccc, sep: 17 }); T(tr('i3'), 140, 212, { w: 480, c: 0x999999, sep: 17 }); if (SH.note) T(SH.note, 320, 250, { a: 1, c: 0x00ffff }); }
+  rows.forEach((r, i) => { const y = g.y0 + i * g.step, hot = i === SH.cur, col = hot ? 0x00ffff : 0xffffff; if (hot && heart >= 0) G.drawSprite(heart, 0, 112, y + 8 * g.sc / 1.6 + 4); T(r.label, 138, y, { s: g.sc, c: col }); if (r.val !== undefined) T(r.val, 540, y, { s: g.sc, c: col, a: 2 }); });
+  if (SH.screen !== 'controls') T(tr('foot').replace('{k}', keyName(binds.port)), 320, 452, { a: 1, c: 0x888888 });
+}
+
+
+// ---------- Touch controls (D-pad + Z / X / C, drawn in the game's own UI style) ----------
+let touchReady = false;
+const isTouchDevice = () => (matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0);
+const tkDown = code => { if (!G || menuOpen) return; if (!G.keys.has(code)) { G.pressed.add(code); G.lastKey = code; } G.keys.add(code); };
+const tkUp = code => { if (!G) return; if (G.keys.has(code)) { G.keys.delete(code); G.released.add(code); } };
+const buzz = () => { try { navigator.vibrate && navigator.vibrate(8); } catch { } };
+function px(c2, x, y, w, h) { c2.fillRect(x, y, w, h); }
+function paintBox(c2, x, y, w, h, hot) { c2.fillStyle = hot ? '#ff0' : '#fff'; px(c2, x, y, w, h); c2.fillStyle = '#000'; px(c2, x + 4, y + 4, w - 8, h - 8); }
+function paintArrow(c2, cx, cy, dir, hot) { c2.fillStyle = hot ? '#ff0' : '#fff'; for (let r = 0; r < 5; r++) { const w = (r * 2 + 1) * 3, o = r * 3 - 6; const rect = dir === 'u' ? [cx - w / 2, cy + o, w, 3] : dir === 'd' ? [cx - w / 2, cy - o - 3, w, 3] : dir === 'l' ? [cx + o, cy - w / 2, 3, w] : [cx - o - 3, cy - w / 2, 3, w]; px(c2, ...rect); } }
+const PAD = { u: [58, 0], d: [58, 116], l: [0, 58], r: [116, 58] }, PADK = { u: 38, d: 40, l: 37, r: 39 };
+function paintPad(cvs, on) {
+  const c2 = cvs.getContext('2d'); c2.imageSmoothingEnabled = false; c2.clearRect(0, 0, 168, 168);
+  for (const k of ['u', 'd', 'l', 'r']) { const [x, y] = PAD[k]; paintBox(c2, x, y, 52, 52, on.has(k)); paintArrow(c2, x + 26, y + 26, k, on.has(k)); }
+  c2.fillStyle = '#fff'; px(c2, 66, 66, 36, 36); c2.fillStyle = '#000'; px(c2, 70, 70, 28, 28);
+}
+function paintKey(cvs, label, caption, size, hot) {
+  const c2 = cvs.getContext('2d'); c2.imageSmoothingEnabled = false; c2.clearRect(0, 0, size, size); paintBox(c2, 0, 0, size, size, hot);
+  if (typeof W !== 'undefined' && W && W.fonts && G) utPaint(c2, () => { G.font = utFont(); G.halign = 1; G.valign = 0; G.drawText(size / 2, size * 0.2, label, 3, 3, 0, hot ? YELLOW : WHITE, 1); G.drawText(size / 2, size - 22, caption, 1, 1, 0, hot ? YELLOW : WHITE, 1); });
+  else { c2.fillStyle = hot ? '#ff0' : '#fff'; c2.font = 'bold 32px monospace'; c2.textAlign = 'center'; c2.fillText(label, size / 2, size / 2 + 8); }
+}
+function layoutTouch() {
+  const pad = document.getElementById('tpad'), btn = document.getElementById('tbtns'); if (!pad) return;
+  const s = Math.max(0.6, Math.min(1.15, (innerWidth - 40) / 380, innerHeight / 330)); pad.style.transform = btn.style.transform = `scale(${s})`;
+}
+function initTouch() {
+  if (touchReady) { if (isTouchDevice()) document.getElementById('touch').style.display = 'block'; return; } if (!isTouchDevice()) return; touchReady = true;
+  document.body.classList.add('touch'); const root = document.getElementById('touch'); root.style.display = 'block';
+  document.addEventListener('contextmenu', e => { if (document.body.classList.contains('touch')) e.preventDefault(); });
+  document.addEventListener('gesturestart', e => e.preventDefault());
+  // --- D-pad: one touch can slide across directions; diagonals press two keys ---
+  const padEl = document.getElementById('tpad'), pc = document.createElement('canvas'); pc.width = pc.height = 168; padEl.appendChild(pc);
+  const held = new Set(); let padPtr = null; paintPad(pc, held);
+  const setDirs = want => { for (const k of ['u', 'd', 'l', 'r']) { if (want.has(k) && !held.has(k)) { held.add(k); tkDown(PADK[k]); buzz(); } else if (!want.has(k) && held.has(k)) { held.delete(k); tkUp(PADK[k]); } } paintPad(pc, held); };
+  const dirsAt = e => { const r = padEl.getBoundingClientRect(), s = r.width / 168, dx = (e.clientX - (r.left + r.width / 2)) / s, dy = (e.clientY - (r.top + r.height / 2)) / s, want = new Set(); if (Math.hypot(dx, dy) < 16) return want; const a = Math.atan2(dy, dx) * 180 / Math.PI; if (dx > 18 && Math.abs(a) < 67) want.add('r'); if (dx < -18 && Math.abs(a) > 113) want.add('l'); if (dy > 18 && a > 22 && a < 158) want.add('d'); if (dy < -18 && a < -22 && a > -158) want.add('u'); return want; };
+  padEl.addEventListener('pointerdown', e => { e.preventDefault(); if (padPtr !== null) return; padPtr = e.pointerId; try { padEl.setPointerCapture(e.pointerId); } catch { } setDirs(dirsAt(e)); });
+  padEl.addEventListener('pointermove', e => { if (e.pointerId === padPtr) setDirs(dirsAt(e)); });
+  for (const t of ['pointerup', 'pointercancel', 'lostpointercapture']) padEl.addEventListener(t, e => { if (e.pointerId === padPtr) { padPtr = null; setDirs(new Set()); } });
+  // --- Z / X / C ---
+  const bt = document.getElementById('tbtns');
+  for (const [label, cap, code, x, y, size] of [['Z', 'OK', 90, 108, 88, 80], ['X', 'BACK', 88, 14, 96, 72], ['C', 'MENU', 67, 62, 0, 72]]) {
+    const el = document.createElement('div'); el.className = 'tb'; el.style.cssText = `left:${x}px;top:${y}px;width:${size}px;height:${size}px`; const cv = document.createElement('canvas'); cv.width = cv.height = size; cv.style.width = cv.style.height = size + 'px'; el.appendChild(cv); bt.appendChild(el);
+    const draw = hot => paintKey(cv, label, cap, size, hot); draw(false); let ptr = null;
+    el.addEventListener('pointerdown', e => { e.preventDefault(); if (ptr !== null) return; ptr = e.pointerId; try { el.setPointerCapture(e.pointerId); } catch { } tkDown(code); draw(true); buzz(); });
+    for (const t of ['pointerup', 'pointercancel', 'lostpointercapture']) el.addEventListener(t, e => { if (e.pointerId === ptr) { ptr = null; tkUp(code); draw(false); } });
+    window.addEventListener('blur', () => { ptr = null; draw(false); });
+  }
+  // --- fullscreen (not available on iPhone Safari) ---
+  if (document.fullscreenEnabled) { const fs = document.getElementById('tfs'), fc = document.createElement('canvas'); fc.width = 72; fc.height = 30; fs.appendChild(fc); const c2 = fc.getContext('2d'); paintBox(c2, 0, 0, 72, 30, false); c2.fillStyle = '#fff'; c2.font = 'bold 14px monospace'; c2.textAlign = 'center'; c2.fillText('FULL', 36, 20); fs.style.display = 'block'; fs.addEventListener('click', () => { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => { }); }); }
+  window.addEventListener('blur', () => { setDirs(new Set()); });
+  addEventListener('resize', layoutTouch); addEventListener('orientationchange', () => setTimeout(layoutTouch, 200)); layoutTouch();
+}
+window.__G = () => G;
+
+</script></body></html>
