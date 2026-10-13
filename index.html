@@ -445,7 +445,7 @@ class Game {
     for (const i of all()) if (i._act && !i.dead) { const s = this.W.sprites[i.sprite_index]; if (s && i.image_speed) { const n = s.frames.length; i.image_index += i.image_speed; if (i.image_index >= n) { i.image_index -= n; this.runEvent(i, 7, 7); } else if (i.image_index < 0) i.image_index += n; } }
     for (const b of this.bg) { b.x += b.hspeed; b.y += b.vspeed; }
     this.updateViews(); this.sweep(); for (const k of this.pressed) this.drawPressed.add(k); for (const k of this.released) this.drawReleased.add(k); this.pressed.clear(); this.released.clear();
-    if (this.pendingRoom !== null) { const r = this.pendingRoom; this.pendingRoom = null; this.gotoRoom(r); }
+    if (this.pendingRoom !== null) { const r = this.pendingRoom; if (this.env.roomReady && !this.env.roomReady(r)) return; this.pendingRoom = null; this.gotoRoom(r); }
   }
   // Other events 'Outside room' (7/0) and 'Intersect boundary' (7/1): were never fired, so e.g. Flowey's missed pellets flew off forever and the fight hung.
   // ---- paths (GM semantics: path_speed px/step scaled by point speed %, endaction 0 stop / 1 restart / 2 continue from here / 3 reverse) ----
@@ -539,7 +539,7 @@ class Game {
   // general sprite blit. part = [px,py,pw,ph] in sprite space (no origin applied) or null
   drawSprite(s, sub, x, y, xs = 1, ys = 1, rot = 0, col = 0xffffff, alpha = 1, part = null) {
     const sp = this.spriteDef(s); if (!sp) return; const n = sp.frames.length; if (!n) return; sub = Math.floor(sub) % n; if (sub < 0) sub += n;
-    const f = sp.frames[sub]; if (!f) return; const c = this.ctx;
+    const f = sp.frames[sub]; if (!f) return; if (!sp.canvas && this.tex.ready && !this.tex.ready(f.t)) { void this.tex[f.t]; return; } const c = this.ctx;
     c.save(); c.globalAlpha = Math.max(0, Math.min(1, alpha)); c.translate(x, y); if (rot) c.rotate(-rot * PI / 180); c.scale(xs, ys);
     let px = 0, py = 0, pw = sp.w, ph = sp.h; if (part) [px, py, pw, ph] = part;
     if (sp.canvas) { c.drawImage(sp.canvas, px, py, pw, ph, part ? 0 : -sp.ox, part ? 0 : -sp.oy, pw, ph); c.restore(); return; }
@@ -559,7 +559,7 @@ class Game {
     if (maxw > 0) { const out = []; for (const ln of lines) { let cur = ''; for (const wd of ln.split(' ')) { const t = cur ? cur + ' ' + wd : wd; if (this.textWidth(t, f) > maxw && cur) { out.push(cur); cur = wd; } else cur = t; } out.push(cur); } lines = out; }
     const lh = (sep > 0 ? sep : f.lh * f.sy);
     c.save(); c.translate(x, y); if (rot) c.rotate(-rot * PI / 180); c.scale(xs * f.sx, ys * f.sy); c.globalAlpha = alpha;
-    const tx = this.tex[f.tp.t];
+    const tx = this.tex[f.tp.t]; if (this.tex.ready && !this.tex.ready(f.tp.t)) return;
     let totalH = lines.length * lh / f.sy; let oy = this.valign === 1 ? -totalH / 2 : this.valign === 2 ? -totalH : 0;
     for (const line of lines) {
       let w = 0; for (const ch of line) { const g = f.glyphs.get(ch.charCodeAt(0)); if (g) w += g.shift; }
@@ -721,19 +721,50 @@ addEventListener('keyup', e => { if (!G) return; const kc = mapKey(e.keyCode); i
 addEventListener('blur', () => { if (G) G.keys.clear(); });
 function toggleFs() { document.fullscreenElement ? document.exitFullscreen() : cv.requestFullscreen?.(); }
 function setMsg(t) { msg.textContent = t; }
+class TexStore {
+  constructor(parts, cap) {
+    this.parts = parts; this.cap = cap; this.bm = new Array(parts.length).fill(null); this.pend = new Map(); this.used = new Array(parts.length).fill(0); this.pin = new Set(); this.frame = 0; this.ph = null;
+    this.px = parts.map(b => ((((b[16] << 24) | (b[17] << 16) | (b[18] << 8) | b[19]) >>> 0)) * (((b[20] << 24) | (b[21] << 16) | (b[22] << 8) | b[23]) >>> 0)); const s = this;
+    this.proxy = new Proxy([], { get(t, k) { if (typeof k === 'string' && /^\d+$/.test(k)) return s.get(+k); if (k === 'ready') return i => s.ready(i); if (k === 'length') return s.parts.length; return t[k]; } });
+  }
+  total() { let n = 0; for (let i = 0; i < this.bm.length; i++) if (this.bm[i]) n += this.px[i]; return n; }
+  ready(i) { return !!this.bm[i]; }
+  get(i) { this.used[i] = this.frame; const b = this.bm[i]; if (b) return b; this.load(i); if (!this.ph) { this.ph = document.createElement('canvas'); this.ph.width = this.ph.height = 1; } return this.ph; }
+  load(i) { if (this.bm[i]) return Promise.resolve(); let p = this.pend.get(i); if (p) return p; p = createImageBitmap(new Blob([this.parts[i]], { type: 'image/png' })).then(b => { this.bm[i] = b; this.pend.delete(i); this.evict(i); }).catch(e => { this.pend.delete(i); console.warn('texture decode failed', i, e); }); this.pend.set(i, p); return p; }
+  need(list) { return Promise.all(list.map(i => this.load(i))); }
+  evict(keep) { let tot = this.total(); while (tot > this.cap) { let j = -1, best = 1e18; for (let k = 0; k < this.bm.length; k++) if (this.bm[k] && k !== keep && !this.pin.has(k) && this.used[k] < this.frame - 3 && this.used[k] < best) { best = this.used[k]; j = k; } if (j < 0) break; try { this.bm[j].close(); } catch { } this.bm[j] = null; tot -= this.px[j]; } }
+  async warm() { for (let i = 0; i < this.parts.length; i++) { if (this.bm[i] || this.total() + this.px[i] > this.cap * 0.85) continue; await this.load(i); await new Promise(r => setTimeout(r, 40)); } }
+}
+let coreMode = false;
+const CACHE_NAME = 'utport-v2';
+async function cachedFetch(url) {
+  let cache = null; try { cache = await caches.open(CACHE_NAME); const hit = await cache.match(url); if (hit) return hit; } catch { cache = null; }
+  const resp = await fetch(url); if (!resp.ok) throw new Error(url + ' returned HTTP ' + resp.status);
+  if (cache) { try { cache.put(url, resp.clone()).catch(() => { }); } catch { } }
+  return resp;
+}
+async function loadCore(onp) {
+  const gz = typeof DecompressionStream !== 'undefined', resp = await cachedFetch(gz ? 'game/core.bin.gz' : 'game/core.bin'), total = +resp.headers.get('content-length') || 0; let got = 0;
+  const counter = new TransformStream({ transform(ch, ctl) { got += ch.length; if (total && onp) onp(got / total); ctl.enqueue(ch); } });
+  let st = resp.body.pipeThrough(counter); if (gz) st = st.pipeThrough(new DecompressionStream('gzip'));
+  return await new Response(st).arrayBuffer();
+}
 async function boot(list) {
   files = new Map(); for (const f of list) files.set(f.name, f); indexFiles();
   const wf = files.get('data.win') || [...files.values()].find(f => /\.win$/i.test(f.name)); if (!wf) return setMsg('data.win not found. Select the Undertale game folder (the one containing data.win).');
   autoMusic = await probe('music/mus_story.ogg');
   setMsg('Reading data.win…'); const buf = await wf.arrayBuffer();
   setMsg('Parsing…'); W = loadCode(parseWin(buf));
-  setMsg('Decoding textures…'); const tex = await Promise.all(W.textures.map(b => createImageBitmap(new Blob([b], { type: 'image/png' }))));
+  const store = new TexStore(W.textures, isTouchDevice() ? 22e6 : 70e6); window.__tex = store; const tex = store.proxy;
+  const base = new Set(); W.fonts.forEach(f => f.tp && base.add(f.tp.t)); for (const n of ['spr_undertaletitle', 'spr_heartsmall']) { const sp = W.sprites.find(s => s.name === n); if (sp) sp.frames.forEach(fr => fr && base.add(fr.t)); } store.pin = base; await store.need([...base]);
+  const roomPages = r => { const R = W.rooms[r], s = new Set(base); if (R) { for (const i of R.instances) { const o = W.objects[i.obj]; if (o && o.sprite >= 0) for (const f of W.sprites[o.sprite].frames) if (f) s.add(f.t); } for (const t of R.tiles) { const b = W.backgrounds[t.bg]; if (b && b.tp) s.add(b.tp.t); } for (const b of R.backgrounds) { const d = b.bg >= 0 && W.backgrounds[b.bg]; if (d && d.tp) s.add(d.tp.t); } } return [...s]; };
+  let rrWait = 0, rrFor = -1; const roomReady = r => { const need = roomPages(r); if (need.every(t => store.ready(t))) { rrWait = 0; return true; } store.need(need); if (rrFor !== r) { rrFor = r; rrWait = 0; } return ++rrWait > 300; };
   const audio = window.__ac || new (window.AudioContext || window.webkitAudioContext)(); await audio.resume().catch(() => { });
   const loadSound = async i => { const sd = W.sounds[i]; if (!sd) return null; let ab = null; const f = files.get(sd.file) || files.get(sd.name + '.ogg') || files.get(sd.name + '.wav') || normMap.get(nk(sd.file)) || normMap.get(nk(sd.name));
-    if (f) ab = await f.arrayBuffer(); else if (autoMusic && sd.flags === 100) { try { const r = await fetch('music/' + encodeURIComponent(sd.file)); if (r.ok) ab = await r.arrayBuffer(); } catch { } } else if (sd.flags !== 100 && sd.audioId >= 0 && W.audio[sd.audioId]) ab = W.audio[sd.audioId].slice().buffer; /* flags 100 = streamed music whose .ogg lives outside data.win; its audioId is a shared placeholder clip (the endless 'wolf' sound), so stay silent instead */ if (!ab) return null;
+    if (f) ab = await f.arrayBuffer(); else if (autoMusic && sd.flags === 100) { try { const r = await cachedFetch('music/' + encodeURIComponent(sd.file)); ab = await r.arrayBuffer(); } catch { } } else if (sd.flags !== 100 && sd.audioId >= 0) { if (W.audio[sd.audioId]) ab = W.audio[sd.audioId].slice().buffer; else if (coreMode) { try { const r = await cachedFetch('game/sfx/' + sd.audioId + '.mp3'); ab = await r.arrayBuffer(); } catch { } } } /* flags 100 = streamed music whose .ogg lives outside data.win; its audioId is a shared placeholder clip (the endless 'wolf' sound), so stay silent instead */ if (!ab) return null;
     try { return await audio.decodeAudioData(ab); } catch (e) { console.warn('audio decode failed', sd.name); return null; } };
-  env = { ctx, tex, audio, files, loadSound, mkCanvas: (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }, setCaption: t => { document.title = t; } };
-  G = new Game(W, env); box.style.display = 'none'; cv.style.display = 'block'; shellInit(); running = true; setTimeout(() => { const n = musicFound(); if (autoMusic) utToast('* Music loaded from the music folder.'); else if (!n) utToast('* No music files found. Pick the whole game folder (mus_*.ogg), or use Settings > Load Music.', true); else utToast('* ' + n + ' music tracks found.'); }, 800); last = performance.now(); acc = 0; initUtButtons(); initSettings(); initTouch(); requestAnimationFrame(loop);
+  env = { ctx, tex, audio, files, loadSound, mkCanvas: (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }, setCaption: t => { document.title = t; }, roomReady, prefetchRoom: r => store.need(roomPages(r)) };
+  G = new Game(W, env); box.style.display = 'none'; cv.style.display = 'block'; shellInit(); running = true; store.warm(); setTimeout(() => { const n = musicFound(); if (autoMusic) utToast('* Music loaded from the music folder.'); else if (!n) utToast('* No music files found. Pick the whole game folder (mus_*.ogg), or use Settings > Load Music.', true); else utToast('* ' + n + ' music tracks found.'); }, 800); last = performance.now(); acc = 0; initUtButtons(); initSettings(); initTouch(); requestAnimationFrame(loop);
 }
 
 // ---------- Load File / Save File (top right, Undertale style) ----------
@@ -842,7 +873,7 @@ function initSettings() {
 }
 let last = 0, acc = 0;
 function loop(t) {
-  if (!running) return; if (SH.open) { try { shellFrame(); } catch (e) { console.error(e); } last = t; acc = 0; requestAnimationFrame(loop); return; } if (menuOpen) { last = t; acc = 0; requestAnimationFrame(loop); return; } acc += Math.min(250, t - last); last = t; const dt = 1000 / (G.roomSpeed || 30); let n = 0;
+  if (!running) return; if (window.__tex) window.__tex.frame++; if (SH.open) { try { shellFrame(); } catch (e) { console.error(e); } last = t; acc = 0; requestAnimationFrame(loop); return; } if (menuOpen) { last = t; acc = 0; requestAnimationFrame(loop); return; } acc += Math.min(250, t - last); last = t; const dt = 1000 / (G.roomSpeed || 30); let n = 0;
   try {
     while (acc >= dt && n < 4) { G.ops = 0; G.step(); acc -= dt; n++; }
     if (cheat.god && G.globals.maxhp > 0) G.globals.hp = G.globals.maxhp;
@@ -875,7 +906,7 @@ async function ingest(list) {
 async function startup() {
   document.getElementById('setup').style.display = 'none'; document.getElementById('play').style.display = 'none';
   try { await IDB.open(); } catch { }
-  SRC = null; if (await probe('data.win')) SRC = 'local';
+  SRC = null; if (await probe('game/core.bin.gz') || await probe('game/core.bin')) SRC = 'local'; else if (await probe('data.win')) SRC = 'legacy';
   if (!SRC) { try { if (IDB.db && await IDB.get('data.win')) SRC = 'cache'; } catch { } }
   if (!SRC) { document.getElementById('box').style.display = 'block'; document.getElementById('setup').style.display = 'block'; setMsg(''); return; }
   const pb = document.getElementById('play'); pb.onclick = () => launch(SRC); setMsg(SRC === 'local' ? 'Game files found. Loading...' : 'Using the game files saved in this browser. Loading...'); launch(SRC);
@@ -883,8 +914,9 @@ async function startup() {
 async function launch(src) {
   const pb = document.getElementById('play'); pb.disabled = true; window.__ac = new (window.AudioContext || window.webkitAudioContext)(); try { await window.__ac.resume(); } catch { }
   try {
-    setMsg('Loading game data (about 60 MB)...'); let list = [];
-    if (src === 'local') { const resp = await fetch('data.win'); if (!resp.ok) throw new Error('data.win returned HTTP ' + resp.status); const blob = await resp.blob(); list = [new File([blob], 'data.win')]; }
+    let list = [];
+    if (src === 'local') { coreMode = true; const ab = await loadCore(p => { document.title = 'Undertale Port ' + Math.round(p * 100) + '%'; }); document.title = 'Undertale Port'; list = [{ name: 'data.win', arrayBuffer: async () => ab }]; }
+    else if (src === 'legacy') { const resp = await fetch('data.win'); if (!resp.ok) throw new Error('data.win returned HTTP ' + resp.status); const blob = await resp.blob(); list = [new File([blob], 'data.win')]; }
     else { const keys = await IDB.keys(); list = keys.map(k => ({ name: String(k), arrayBuffer: async () => (await IDB.get(k)).arrayBuffer() })); }
     pb.style.display = 'none'; await boot(list);
   } catch (e) { console.error(e); document.getElementById('box').style.display = 'block'; setMsg('Could not load the game files: ' + (e && e.message)); pb.style.display = 'inline-block'; pb.disabled = false; }
@@ -975,7 +1007,7 @@ function shellMusic(on) {
   if (SH.music !== null) return; const i = W.sounds.findIndex(s => s.name === 'mus_toriel'); if (i < 0) return;
   SH.music = G.F.audio_play_sound([i, 100, 1]); try { G.F.audio_sound_gain([SH.music, 0.55, 0]); } catch { }
 }
-function startGame() { SH.open = false; shellMusic(false); SH.started = true; G.gameLang = gameLang; G.keys.clear(); G.pressed.clear(); G.released.clear(); G.start(); }
+async function startGame() { if (SH.starting) return; SH.starting = true; try { await G.env.prefetchRoom(G.W.roomOrder[0]); } catch { } SH.starting = false; SH.open = false; shellMusic(false); SH.started = true; G.gameLang = gameLang; G.keys.clear(); G.pressed.clear(); G.released.clear(); G.start(); }
 function resumeGame() { SH.open = false; shellMusic(false); try { G.F.audio_resume_all(); } catch { } G.keys.clear(); G.pressed.clear(); G.released.clear(); capture = null; }
 function togglePort() { if (!G || !running) return; if (SH.open) { if (SH.started) resumeGame(); return; } if (!SH.started) return; try { G.F.audio_pause_all(); } catch { } G.keys.clear(); G.pressed.clear(); SH.open = true; SH.screen = 'main'; SH.cur = 0; shellMusic(true); }
 function rowGeom() { const s = SH.screen; return s === 'lang' ? { y0: 190, step: 46, sc: 1.8 } : s === 'controls' ? { y0: 92, step: 29, sc: 1.2 } : { y0: 276, step: 36, sc: 1.6 }; }
