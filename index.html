@@ -27,6 +27,14 @@ body.touch .utm{top:calc(env(safe-area-inset-top) + 4px);left:calc(env(safe-area
 #tbtns .tb{position:absolute;touch-action:none}
 #tfs{left:50%;bottom:calc(env(safe-area-inset-bottom) + 6px);transform:translateX(-50%);display:none}
 #uthint{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 2px);transform:translateX(-50%);z-index:40;min-width:96px;height:28px;padding:0 12px;display:none;align-items:center;justify-content:center;font:12px/1 monospace;color:#bbb;opacity:.85;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;white-space:nowrap}
+#tpad{display:none !important}
+#tjoy{position:fixed;inset:0;z-index:14;touch-action:none;-webkit-user-select:none;user-select:none}
+#tjb,#tjk{position:absolute;display:none;pointer-events:none;box-sizing:border-box}
+#tjb{width:120px;height:120px;border:4px solid #fff;background:rgba(0,0,0,.35);opacity:.7}
+#tjk{width:48px;height:48px;background:#fff;opacity:.85}
+@media (orientation:landscape){#touch #tfs{bottom:auto !important;top:calc(env(safe-area-inset-top) + 4px) !important}}
+#pcfs{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:20;padding:0;margin:0;border:0;background:none;cursor:pointer;outline:none}
+body.uihidden #pcfs{display:none !important}
 body.uihidden #uthinttxt,body.uihidden #touch,body.uihidden #utbar,body.uihidden #utset{display:none !important}
 #tfs{bottom:calc(env(safe-area-inset-bottom) + 34px) !important}
 
@@ -1318,8 +1326,47 @@ function layoutTouch() {
   const pad = document.getElementById('tpad'), btn = document.getElementById('tbtns'); if (!pad) return;
   const s = Math.max(0.6, Math.min(1.15, (innerWidth - 40) / 380, innerHeight / 330)); pad.style.transform = btn.style.transform = `scale(${s})`;
 }
+function initPcFs() {
+  if (document.getElementById('pcfs') || !document.fullscreenEnabled) return;
+  const b = document.createElement('button'), cvs = document.createElement('canvas'); b.id = 'pcfs'; b.tabIndex = -1; b.appendChild(cvs); document.body.appendChild(b);
+  const d = hot => { paintButton(cvs, 'Fullscreen', hot); utFit(cvs); }; d(false);
+  b.addEventListener('pointerenter', () => d(true)); b.addEventListener('pointerleave', () => d(false)); b.addEventListener('mousedown', e => e.preventDefault());
+  b.addEventListener('click', () => { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => { }); b.blur(); });
+  addEventListener('resize', () => utFit(cvs));
+}
+// Floating joystick: touch the left half anywhere, drag to move. A quick tap anywhere = Z (continue dialogue / confirm).
+function initJoy() {
+  const el = document.createElement('div'), base = document.createElement('div'), knob = document.createElement('div');
+  el.id = 'tjoy'; base.id = 'tjb'; knob.id = 'tjk'; el.appendChild(base); el.appendChild(knob); document.body.appendChild(el);
+  const K = { u: 38, d: 40, l: 37, r: 39 }, held = new Set(), R = 50, DZ = 14;
+  let ptr = null, ox = 0, oy = 0, sx = 0, sy = 0, t0 = 0, moved = false, joy = false;
+  const setDirs = want => { for (const k of ['u', 'd', 'l', 'r']) { if (want.has(k) && !held.has(k)) { held.add(k); tkDown(K[k]); } else if (!want.has(k) && held.has(k)) { held.delete(k); tkUp(K[k]); } } };
+  const place = (n, x, y, w) => { n.style.left = (x - w / 2) + 'px'; n.style.top = (y - w / 2) + 'px'; };
+  const update = e => {
+    let dx = e.clientX - ox, dy = e.clientY - oy, dist = Math.hypot(dx, dy);
+    if (dist > R) { ox += dx / dist * (dist - R); oy += dy / dist * (dist - R); dx = e.clientX - ox; dy = e.clientY - oy; dist = R; }
+    place(base, ox, oy, 120); place(knob, ox + dx, oy + dy, 48);
+    const want = new Set();
+    if (dist > DZ) { const a = Math.atan2(dy, dx) * 180 / Math.PI; if (Math.abs(a) < 67.5) want.add('r'); if (Math.abs(a) > 112.5) want.add('l'); if (a > 22.5 && a < 157.5) want.add('d'); if (a < -22.5 && a > -157.5) want.add('u'); }
+    setDirs(want);
+  };
+  el.addEventListener('pointerdown', e => {
+    e.preventDefault(); wakeAudio();
+    if (SH.open) { const r = cv.getBoundingClientRect(); shellTap((e.clientX - r.left) * 640 / r.width, (e.clientY - r.top) * 480 / r.height); return; }
+    if (ptr !== null) return; ptr = e.pointerId; try { el.setPointerCapture(e.pointerId); } catch { }
+    t0 = performance.now(); sx = ox = e.clientX; sy = oy = e.clientY; moved = false; joy = e.clientX < innerWidth * 0.5;
+    if (joy) { base.style.display = knob.style.display = 'block'; update(e); }
+  });
+  el.addEventListener('pointermove', e => { if (e.pointerId !== ptr) return; if (Math.hypot(e.clientX - sx, e.clientY - sy) > 12) moved = true; if (joy) update(e); });
+  const end = e => {
+    if (e.pointerId !== ptr) return; ptr = null; base.style.display = knob.style.display = 'none'; setDirs(new Set());
+    if (e.type === 'pointerup' && !moved && performance.now() - t0 < 250 && !menuOpen) { tkDown(90); setTimeout(() => tkUp(90), 110); }
+  };
+  for (const t of ['pointerup', 'pointercancel', 'lostpointercapture']) el.addEventListener(t, end);
+  window.addEventListener('blur', () => { setDirs(new Set()); });
+}
 function initTouch() {
-  if (touchReady) { if (isTouchDevice()) document.getElementById('touch').style.display = 'block'; return; } if (!isTouchDevice()) return; touchReady = true;
+  if (touchReady) { if (isTouchDevice()) document.getElementById('touch').style.display = 'block'; return; } if (!isTouchDevice()) { initPcFs(); return; } touchReady = true; initJoy();
   document.body.classList.add('touch'); const root = document.getElementById('touch'); root.style.display = 'block';
   document.addEventListener('contextmenu', e => { if (document.body.classList.contains('touch')) e.preventDefault(); });
   document.addEventListener('gesturestart', e => e.preventDefault());
